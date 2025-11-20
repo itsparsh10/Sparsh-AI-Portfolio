@@ -8,7 +8,7 @@ export default function Page() {
   const { isChatActive } = useChat();
   
   return (
-    <div className="flex flex-col min-h-screen bg-white relative overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-white relative overflow-x-hidden">
       {/* Abstract flowing lines background - same as hero, visible in chat section */}
       <div
         className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-30"

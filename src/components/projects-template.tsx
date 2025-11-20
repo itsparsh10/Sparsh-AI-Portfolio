@@ -27,8 +27,12 @@ export default function ProjectsTemplate() {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      const cardWidth = 420;
-      const gap = 24; // gap-6 = 1.5rem = 24px
+      // Calculate card width based on screen size
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+      const isDesktop = window.innerWidth >= 768 && window.innerWidth < 1024;
+      const cardWidth = isMobile ? 280 : isTablet ? 320 : isDesktop ? 380 : 420;
+      const gap = window.innerWidth < 640 ? 16 : window.innerWidth < 768 ? 20 : 24;
       scrollContainerRef.current.scrollBy({
         left: -(cardWidth + gap),
         behavior: "smooth",
@@ -39,8 +43,12 @@ export default function ProjectsTemplate() {
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      const cardWidth = 420;
-      const gap = 24;
+      // Calculate card width based on screen size
+      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth >= 640 && window.innerWidth < 768;
+      const isDesktop = window.innerWidth >= 768 && window.innerWidth < 1024;
+      const cardWidth = isMobile ? 280 : isTablet ? 320 : isDesktop ? 380 : 420;
+      const gap = window.innerWidth < 640 ? 16 : window.innerWidth < 768 ? 20 : 24;
       scrollContainerRef.current.scrollBy({
         left: cardWidth + gap,
         behavior: "smooth",
@@ -121,11 +129,11 @@ export default function ProjectsTemplate() {
               scrollbarColor: '#cbd5e1 #f1f5f9',
             }}
           >
-            <div className="flex gap-4 sm:gap-5 md:gap-6" style={{ width: 'max-content' }}>
+            <div className="flex gap-3 xs:gap-4 sm:gap-5 md:gap-6" style={{ width: 'max-content' }}>
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="group relative flex-shrink-0 rounded-xl border border-gray-200 bg-white overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-200 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]"
+                  className="group relative flex-shrink-0 rounded-xl border border-gray-200 bg-white overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-200 w-[260px] xs:w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]"
                 >
                   {/* Project Image */}
                   <div className="relative h-56 sm:h-64 md:h-72 w-full overflow-hidden bg-gray-100">
@@ -144,7 +152,7 @@ export default function ProjectsTemplate() {
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-4 sm:p-5 md:p-6">
+                  <div className="p-3 xs:p-4 sm:p-5 md:p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       {project.title}

@@ -441,9 +441,9 @@ export default function StickySearch() {
   ];
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex flex-col items-center gap-3 px-4">
+    <div className="pointer-events-none fixed inset-x-0 bottom-2 sm:bottom-4 z-50 flex flex-col items-center gap-2 sm:gap-3 px-2 sm:px-4">
       {/* Quick Action Buttons */}
-      <div className="pointer-events-auto w-full max-w-[859px] flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+      <div className="pointer-events-auto w-full max-w-[859px] flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
         {quickActions.map(({ label, icon: Icon, action, type, iconColor }) => (
           <button
             key={label}
@@ -454,23 +454,23 @@ export default function StickySearch() {
               }
             }}
             disabled={isTyping}
-            className={`h-auto min-w-[90px] sm:min-w-[100px] flex-shrink-0 rounded-xl border px-3 sm:px-4 py-2.5 sm:py-3 shadow-none backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3 ${isTyping
+            className={`h-auto min-w-[70px] xs:min-w-[80px] sm:min-w-[90px] md:min-w-[100px] flex-shrink-0 rounded-lg sm:rounded-xl border px-2 xs:px-2.5 sm:px-3 md:px-4 py-1.5 xs:py-2 sm:py-2.5 md:py-3 shadow-none backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-3 ${isTyping
               ? "bg-gray-100/50 border-gray-200 cursor-not-allowed opacity-50 pointer-events-none"
               : "bg-white/80 border-gray-200 hover:bg-gray-100 active:scale-95"
               }`}
             aria-label={label}
           >
-            <Icon size={18} className={isTyping ? "text-gray-400" : iconColor} />
-            <span className={`text-sm font-medium ${isTyping ? "text-gray-400" : "text-gray-700"
+            <Icon size={14} className={`xs:w-4 xs:h-4 sm:w-[18px] sm:h-[18px] ${isTyping ? "text-gray-400" : iconColor}`} />
+            <span className={`text-xs xs:text-xs sm:text-sm font-medium whitespace-nowrap ${isTyping ? "text-gray-400" : "text-gray-700"
               }`}>{label}</span>
           </button>
         ))}
       </div>
 
       {/* Search Input */}
-      <div className="pointer-events-auto w-full max-w-[859px] rounded-full border border-base-100 bg-white/90 backdrop-blur-xl shadow-lg">
-        <div className="flex items-center gap-5 px-7 py-5">
-          <Search size={18} className="text-base-900/60" />
+      <div className="pointer-events-auto w-full max-w-[859px] rounded-2xl sm:rounded-full border border-base-100 bg-white/90 backdrop-blur-xl shadow-lg">
+        <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-5 px-3 xs:px-4 sm:px-5 md:px-7 py-3 xs:py-3.5 sm:py-4 md:py-5">
+          <Search size={16} className="xs:w-4 xs:h-4 sm:w-[18px] sm:h-[18px] text-base-900/60 flex-shrink-0" />
           <input
             name="q"
             value={query}
@@ -488,10 +488,10 @@ export default function StickySearch() {
               }
             }}
             placeholder={isChatActive ? "Ask me anything" : "Search projects, skills, posts…"}
-            className="flex-1 bg-transparent outline-none placeholder:text-base-900/40 text-lg"
+            className="flex-1 bg-transparent outline-none placeholder:text-base-900/40 text-sm xs:text-base sm:text-lg min-w-0"
             disabled={isTyping}
           />
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 flex-shrink-0">
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -500,7 +500,7 @@ export default function StickySearch() {
                 }
               }}
               disabled={isTyping}
-              className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${isTyping
+              className={`w-8 h-8 xs:w-9 xs:h-9 rounded-full flex items-center justify-center transition-colors ${isTyping
                 ? "bg-transparent text-base-900/30 cursor-not-allowed"
                 : isListening
                   ? "bg-red-500 text-white hover:bg-red-600 animate-pulse"
@@ -508,7 +508,7 @@ export default function StickySearch() {
                 }`}
               aria-label={isListening ? "Stop listening" : "Start voice search"}
             >
-              <Mic size={18} />
+              <Mic size={14} className="xs:w-4 xs:h-4 sm:w-[18px] sm:h-[18px]" />
             </button>
             {isTyping ? (
               <button
@@ -516,10 +516,10 @@ export default function StickySearch() {
                   e.preventDefault();
                   stopStreaming();
                 }}
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-colors bg-gray-900 text-white hover:bg-gray-800"
+                className="w-8 h-8 xs:w-9 xs:h-9 rounded-full flex items-center justify-center transition-colors bg-gray-900 text-white hover:bg-gray-800"
                 aria-label="Stop generation"
               >
-                <Square size={14} fill="currentColor" />
+                <Square size={12} className="xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5" fill="currentColor" />
               </button>
             ) : (
               <button
@@ -530,13 +530,13 @@ export default function StickySearch() {
                   }
                 }}
                 disabled={!query.trim()}
-                className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${!query.trim()
+                className={`w-8 h-8 xs:w-9 xs:h-9 rounded-full flex items-center justify-center transition-colors ${!query.trim()
                   ? "bg-transparent text-base-900/30 cursor-not-allowed opacity-50 pointer-events-none"
                   : "bg-blue-500 text-white hover:bg-blue-600"
                   }`}
                 aria-label="Send message"
               >
-                <ArrowRight size={18} />
+                <ArrowRight size={14} className="xs:w-4 xs:h-4 sm:w-[18px] sm:h-[18px]" />
               </button>
             )}
           </div>

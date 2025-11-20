@@ -365,18 +365,18 @@ export default function Hero() {
 
       {/* Content */}
       <div
-        className={`relative z-10 w-full max-w-4xl mx-auto px-6 text-center transition-all duration-700 ${
+        className={`relative z-10 w-full max-w-4xl mx-auto px-4 xs:px-5 sm:px-6 text-center transition-all duration-700 ${
           isChatActive
             ? "-mt-0 sm:-mt-0 md:-mt-0"
-            : "-mt-16 sm:-mt-20 md:-mt-24"
+            : "-mt-12 xs:-mt-14 sm:-mt-16 md:-mt-20 lg:-mt-24"
         }`}
       >
         {/* Main heading */}
         <h1
           className={`font-serif text-[#1A2F2F] leading-tight transition-all duration-700 ${
             isChatActive
-              ? "text-2xl sm:text-3xl md:text-4xl mb-2"
-              : "text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8"
+              ? "text-xl xs:text-2xl sm:text-3xl md:text-4xl mb-2"
+              : "text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 xs:mb-6 sm:mb-8"
           }`}
         >
           {renderText()}

@@ -21,10 +21,10 @@ export default function AboutMeTemplate() {
     <div className="w-full max-w-4xl mx-auto">
       <div className="prose prose-gray max-w-none">
         {/* Profile Header Section */}
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mb-8 pb-8 border-b border-gray-200">
+        <div className="flex flex-col sm:flex-row gap-4 xs:gap-6 sm:gap-8 mb-6 xs:mb-8 pb-6 xs:pb-8 border-b border-gray-200">
           {/* Profile Picture */}
           <div className="flex-shrink-0 flex justify-center sm:justify-start">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200/50 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div className="relative w-48 h-48 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-xl xs:rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200/50 bg-gradient-to-br from-gray-50 to-gray-100">
               <Image
                 src="/Sparsh.jpeg"
                 alt={profileData.name}
@@ -37,13 +37,13 @@ export default function AboutMeTemplate() {
           </div>
 
           {/* Profile Info */}
-          <div className="flex-1 min-w-0 space-y-4">
+          <div className="flex-1 min-w-0 space-y-3 xs:space-y-4">
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2 tracking-tight text-center">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-2 tracking-tight text-center sm:text-left">
                 {profileData.name}
               </h1>
               {profileData.about.who && (
-                <p className="text-base text-gray-600 font-medium">
+                <p className="text-sm xs:text-base text-gray-600 font-medium text-center sm:text-left">
                   {profileData.about.who}
                   {profileData.about.specialize && (
                     <span className="text-gray-400"> • {profileData.about.specialize}</span>
@@ -53,13 +53,13 @@ export default function AboutMeTemplate() {
             </div>
 
             {/* Short Intro */}
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-base xs:text-lg text-gray-700 leading-relaxed text-center sm:text-left">
               {profileData.shortIntro}
             </p>
 
             {/* Current Work */}
             {profileData.about.currentWork && (
-              <p className="text-sm text-gray-600">
+              <p className="text-xs xs:text-sm text-gray-600 text-center sm:text-left">
                 <span className="font-medium">Currently:</span> {profileData.about.currentWork}
               </p>
             )}

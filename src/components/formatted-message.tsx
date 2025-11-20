@@ -58,7 +58,7 @@ export default function FormattedMessage({ text, isStreaming }: FormattedMessage
       flushList();
       const processedLine = processInlineFormatting(trimmedLine);
       elements.push(
-        <p key={`p-${keyCounter++}`} className="text-sm sm:text-base leading-relaxed mb-2 last:mb-0">
+        <p key={`p-${keyCounter++}`} className="text-xs xs:text-sm sm:text-base leading-relaxed mb-2 last:mb-0 break-words">
           {processedLine}
         </p>
       );
@@ -67,7 +67,7 @@ export default function FormattedMessage({ text, isStreaming }: FormattedMessage
     // Flush any remaining list items
     flushList();
 
-    return elements.length > 0 ? elements : <span className="text-sm sm:text-base leading-relaxed">{text}</span>;
+    return elements.length > 0 ? elements : <span className="text-xs xs:text-sm sm:text-base leading-relaxed break-words">{text}</span>;
   }, [text]);
 
   function processInlineFormatting(content: string): React.ReactNode[] {

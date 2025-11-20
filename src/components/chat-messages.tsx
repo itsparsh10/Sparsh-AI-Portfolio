@@ -76,8 +76,8 @@ export default function ChatMessages() {
   const hasStreamingMessage = messages.some(msg => msg.isStreaming);
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto px-6 py-8 pb-48 sm:pb-44 flex-1 overflow-y-auto min-h-0 bg-transparent">
-      <div className="space-y-6">
+    <div ref={containerRef} className="w-full max-w-4xl mx-auto px-3 xs:px-4 sm:px-5 md:px-6 py-4 xs:py-6 sm:py-8 pb-32 xs:pb-36 sm:pb-40 md:pb-44 lg:pb-48 flex-1 overflow-y-auto min-h-0 bg-transparent">
+      <div className="space-y-4 xs:space-y-5 sm:space-y-6">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -167,7 +167,7 @@ export default function ChatMessages() {
               </div>
             ) : (
               <div
-                className={`max-w-[80%] sm:max-w-[70%] rounded-2xl px-5 py-3 ${message.sender === "user"
+                className={`max-w-[85%] xs:max-w-[80%] sm:max-w-[75%] md:max-w-[70%] rounded-xl xs:rounded-2xl px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3 ${message.sender === "user"
                   ? "bg-blue-500 text-white rounded-br-sm"
                   : "bg-gray-100 text-gray-900 rounded-bl-sm"
                   }`}
@@ -183,7 +183,7 @@ export default function ChatMessages() {
         {/* Only show typing dots if there's no streaming message already */}
         {isTyping && !hasStreamingMessage && (
           <div className="flex justify-start">
-            <div className="max-w-[80%] sm:max-w-[70%] rounded-2xl rounded-bl-sm bg-gray-100 text-gray-900 px-5 py-3">
+            <div className="max-w-[85%] xs:max-w-[80%] sm:max-w-[75%] md:max-w-[70%] rounded-xl xs:rounded-2xl rounded-bl-sm bg-gray-100 text-gray-900 px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3">
               <div className="flex gap-1.5 items-center">
                 <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
                 <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
