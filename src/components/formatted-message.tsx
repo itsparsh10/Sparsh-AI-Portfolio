@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import Link from "next/link";
 
 interface FormattedMessageProps {
@@ -321,13 +321,58 @@ export default function FormattedMessage({ text, isStreaming }: FormattedMessage
     return parts.length > 0 ? parts : [<span key={`text-${startKey}`}>{text}</span>];
   }
 
+  // If streaming, inject the streaming caret into the last paragraph element
+  let contentToRender: React.ReactNode = formattedContent;
+
+  if (isStreaming) {
+    const arr = Array.isArray(formattedContent) ? formattedContent.slice() : [formattedContent];
+    const last = arr[arr.length - 1];
+
+    if (React.isValidElement(last) && (last.type === 'p' || (last.props && last.props.className && typeof last.props.className === 'string' && last.props.className.includes('text-xs')))) {
+      const caret = (
+        <span
+          key="stream-caret"
+          className="animate-pulse"
+          style={{
+            display: 'inline-block',
+            width: '2px',
+            height: '1em',
+            marginLeft: '0.25rem',
+            background: 'currentColor',
+            verticalAlign: 'middle',
+            animationDuration: '1s',
+          }}
+        />
+      );
+      const newLast = React.cloneElement(last as React.ReactElement, { ...(last as React.ReactElement).props }, [
+        ...(Array.isArray((last as any).props.children) ? (last as any).props.children : [(last as any).props.children]),
+        caret,
+      ]);
+      arr[arr.length - 1] = newLast;
+      contentToRender = arr;
+    } else {
+      // Fallback: append caret after content
+      const caret = (
+        <span
+          key="stream-caret"
+          className="animate-pulse"
+          style={{
+            display: 'inline-block',
+            width: '2px',
+            height: '1em',
+            marginLeft: '0.25rem',
+            background: 'currentColor',
+            verticalAlign: 'middle',
+            animationDuration: '1s',
+          }}
+        />
+      );
+      contentToRender = Array.isArray(formattedContent) ? [...formattedContent, caret] : [formattedContent, caret];
+    }
+  }
+
   return (
-    <div className="prose prose-sm max-w-none">
-      {formattedContent}
-      {isStreaming && (
-        <span className="inline-block w-0.5 h-4 ml-1 bg-current animate-pulse" style={{ animationDuration: '1s' }} />
-      )}
-    </div>
+    <div className="prose prose-sm max-w-none">{contentToRender}</div>
   );
 }
 

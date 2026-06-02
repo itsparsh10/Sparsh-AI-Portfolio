@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: "Markzy your marketing buddy - An AI-powered marketing platform that helps businesses create high-converting content across all channels using 100+ AI tools, with powerful AI SEO and free content writing capabilities.",
     image: "/Markzy.png",
     bgColor: "bg-gradient-to-b from-blue-500 to-blue-700",
-    liveLink: "https://www.markzy.ai/",
+    liveLink: "https://markzy-ai.vercel.app/",
     githubLink: "https://github.com/itsparsh10/Markzy.ai",
     details: "State-of-the-Art AI Platform: Revolutionary Next.js-powered SaaS platform featuring 100+ specialized AI tools delivering real-time, high-converting content across social media, email, SEO, ads, and sales channels with enterprise-grade precision. Advanced AI Architecture: Built on cutting-edge large language models (GPT-4 & Claude) with intelligent content generation, delivering platform-tailored copy optimized for maximum conversion rates and engagement. Enterprise-Grade Infrastructure: Seamless Stripe payment integration, advanced team collaboration tools, comprehensive performance analytics, and enterprise security protocols for scalable, mission-critical marketing operations. Intelligent Content Production: Transforms marketing workflows into lightning-fast, infinitely scalable, AI-driven content production, boosting conversions by 40% and saving 10+ hours weekly through automated optimization."
   },

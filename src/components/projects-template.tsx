@@ -202,7 +202,7 @@ export default function ProjectsTemplate() {
                 <li><strong>Advanced AI Architecture:</strong> Built on cutting-edge large language models (GPT-4 & Claude) with intelligent content generation, delivering platform-tailored copy optimized for maximum conversion rates and engagement</li>
                 <li><strong>Enterprise-Grade Infrastructure:</strong> Seamless Stripe payment integration, advanced team collaboration tools, comprehensive performance analytics, and enterprise security protocols for scalable, mission-critical marketing operations</li>
                 <li><strong>Intelligent Content Production:</strong> Transforms marketing workflows into lightning-fast, infinitely scalable, AI-driven content production, boosting conversions by 40% and saving 10+ hours weekly through automated optimization</li>
-                <li>Live platform available at <a href="https://www.markzy.ai/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">markzy.ai</a></li>
+                <li>Live platform available at <a href="https://markzy-ai.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">markzy-ai.vercel.app</a></li>
               </ul>
             </div>
 

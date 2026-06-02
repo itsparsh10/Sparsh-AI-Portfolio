@@ -222,6 +222,17 @@ export function analyzeQuery(query: string): QueryAnalysis {
 
   if (certKeywords.some(keyword => lowerQuery.includes(keyword))) {
     // Check for specific certification mentions
+    if (lowerQuery.includes("oracle") || lowerQuery.includes("oci") || lowerQuery.includes("ai foundations")) {
+      return {
+        responseType: "text",
+        shouldShowCard: true,
+        cardData: {
+          type: "certification",
+          identifier: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate"
+        }
+      };
+    }
+
     if (lowerQuery.includes("databricks") || lowerQuery.includes("generative ai")) {
       return {
         responseType: "text",

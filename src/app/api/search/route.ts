@@ -1,9 +1,5 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import { analyzeQuery, ResponseType } from "@/lib/query-analyzer";
-
-// Initialize Gemini
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY || "");
 
 // Get all project data for system prompt
 const projectsData = [
@@ -11,7 +7,7 @@ const projectsData = [
     category: "AI Marketing Platform",
     title: "Markzy",
     description: "Markzy your marketing buddy - An AI-powered marketing platform that helps businesses create high-converting content across all channels using 100+ AI tools, with powerful AI SEO and free content writing capabilities.",
-    liveLink: "https://www.markzy.ai/",
+    liveLink: "https://markzy-ai.vercel.app/",
     githubLink: "https://github.com/itsparsh10/Markzy.ai",
     details: "State-of-the-Art AI Platform: Revolutionary Next.js-powered SaaS platform featuring 100+ specialized AI tools delivering real-time, high-converting content across social media, email, SEO, ads, and sales channels with enterprise-grade precision. Advanced AI Architecture: Built on cutting-edge large language models (GPT-4 & Claude) with intelligent content generation, delivering platform-tailored copy optimized for maximum conversion rates and engagement. Enterprise-Grade Infrastructure: Seamless Stripe payment integration, advanced team collaboration tools, comprehensive performance analytics, and enterprise security protocols for scalable, mission-critical marketing operations. Intelligent Content Production: Transforms marketing workflows into lightning-fast, infinitely scalable, AI-driven content production, boosting conversions by 40% and saving 10+ hours weekly through automated optimization."
   },
@@ -116,8 +112,9 @@ Core Concepts: CS Fundamentals, Data Structures and Algorithms, OOPS
 Soft Skills: Problem-Solving, Team Collaboration, Critical Thinking, Time Management
 
 CERTIFICATIONS:
-1. Academy Accreditation - Generative AI Fundamentals (Databricks) - Issued Feb 2025, Expires Feb 2027, Credential ID 133241213
-2. Goldman Sachs - Software Engineering - Issued Sep 2024, Credential ID KfXsu5XxM5tQZuvcL
+1. Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate - Issued Feb 2026, Credential ID B8680F3A059610553A4A51B19AEBDD8188E32881DFE99B82DBC11461C214863B
+2. Academy Accreditation - Generative AI Fundamentals (Databricks) - Issued Feb 2025, Expires Feb 2027, Credential ID 133241213
+3. Goldman Sachs - Software Engineering - Issued Sep 2024, Credential ID KfXsu5XxM5tQZuvcL
 
 EXPERIENCE:
 
@@ -209,7 +206,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
+    const apiKey = process.env.OPENROUTER_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
         { error: "API key not configured" },
@@ -275,16 +272,28 @@ export async function POST(request: NextRequest) {
 - Be specific about companies, roles, and achievements`;
     }
 
-    // Use Gemini 2.0 Flash model
-    const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash",
-      systemInstruction: createSystemPrompt()
+    // Use OpenRouter API with Gemini 2.0 Flash Lite Preview Free
+    const openRouterResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "openrouter/free",
+        messages: [
+          { role: "system", content: createSystemPrompt() },
+          { role: "user", content: enhancedMessage }
+        ]
+      })
     });
 
-    // Generate response with enhanced message
-    const result = await model.generateContent(enhancedMessage);
-    const response = await result.response;
-    const text = response.text();
+    if (!openRouterResponse.ok) {
+      throw new Error(`OpenRouter API error: ${openRouterResponse.status} ${openRouterResponse.statusText}`);
+    }
+
+    const data = await openRouterResponse.json();
+    const text = data.choices[0].message.content;
 
     // Return response with analysis data
     return NextResponse.json({

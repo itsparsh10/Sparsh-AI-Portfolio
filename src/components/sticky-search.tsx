@@ -341,6 +341,7 @@ export default function StickySearch() {
 
     // Generate streaming response for other actions
     try {
+      setIsTyping(true);
       const response = await generateResponse(action.toLowerCase());
 
       // Determine message type based on response
@@ -399,6 +400,7 @@ export default function StickySearch() {
 
     // Generate streaming AI response
     try {
+      setIsTyping(true);
       const response = await generateResponse(userMessage);
 
       // Determine message type based on response
