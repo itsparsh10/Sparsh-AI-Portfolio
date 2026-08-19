@@ -1,0 +1,1130 @@
+Yes — I understand exactly what you want now.
+
+I analyzed the actual itsparsh10/NC-Dashboard repository, its README, developer documentation, code analysis, and the redesign/style reference you supplied. The repository describes Nubinno Connect (NC) as a Django-based pharmaceutical-industry platform with dual MongoDB/PostgreSQL architecture, role-based access, analytics, dashboards, exports, email notifications, and secure remote database connectivity.  The developer documentation confirms the core architecture and separates authentication/session data in MongoDB from business data in PostgreSQL.
+
+And I would not present it as merely “a dashboard.”
+
+The correct positioning is:
+
+Nubinno Connect — Enterprise Analytics & Operations Platform
+
+A full-stack platform for managing pharmaceutical business data, users, companies, jobs and analytics through a unified operational dashboard.
+
+The page should make an HR/recruiter understand the value in 5–10 seconds, then reward them with progressively deeper technical detail.
+
+⸻
+
+The final /nc-dashboard page
+
+I would make the complete page 14 sections, but only about 8 are visible in the first ~60 seconds.
+
+The structure:
+
+01  HERO
+02  PRODUCT AT A GLANCE
+03  THE PLATFORM
+04  ANALYTICS / DASHBOARD
+05  OPERATIONS
+06  DATA ARCHITECTURE
+07  AUTHENTICATION + RBAC
+08  ENGINEERING / BACKEND
+09  AUTOMATION + INTEGRATIONS
+10  EXPORTS + REPORTING
+11  SECURITY + RELIABILITY
+12  TECH STACK
+13  ENGINEERING TAKEAWAYS
+14  FINAL CTA
+
+That is enough.
+
+Do not put installation instructions, 20 paragraphs about individual API endpoints, every model field, or every README detail on the portfolio page. Those belong in GitHub.
+
+Your website is the recruiter-facing product story.
+
+⸻
+
+01 — HERO
+
+This is the most important screen.
+
+Eyebrow
+
+NUBINNO CONNECT
+
+Main heading
+
+Enterprise data, connected.
+
+Supporting heading
+
+A full-stack analytics and operations platform built for pharmaceutical business workflows.
+
+Description
+
+Nubinno Connect brings users, companies, jobs, operational data and analytics into one unified platform — backed by Django, PostgreSQL, MongoDB and a role-aware application architecture.
+
+Buttons
+
+[ VIEW LIVE PRODUCT ]
+[ VIEW SOURCE → ]
+
+If you don’t have a live deployment, use:
+
+[ EXPLORE PLATFORM ]
+[ VIEW SOURCE → ]
+
+Small metadata row
+
+Django 5.2.7     Python 3.10+     PostgreSQL     MongoDB
+
+⸻
+
+Hero visual
+
+This is where your best dashboard screenshot goes.
+
+Not a collage.
+
+Not five screenshots.
+
+One huge screenshot.
+
+              NUBINNO CONNECT
+        Enterprise data, connected.
+  A full-stack analytics and operations platform...
+        [ View Product ]  [ GitHub → ]
+ ┌─────────────────────────────────────────────────┐
+ │                                                 │
+ │              YOUR MAIN DASHBOARD               │
+ │                                                 │
+ │       analytics / charts / KPIs / tables       │
+ │                                                 │
+ └─────────────────────────────────────────────────┘
+
+The screenshot should slightly overlap the next section.
+
+That is very close to the product-marketing language you are referencing.
+
+Your supplied design reference strongly supports this direction: spacious white canvas, large display typography, restrained cards, real product screenshots as the primary imagery, and a centered product visual rather than generic marketing imagery.  
+
+⸻
+
+02 — PRODUCT AT A GLANCE
+
+Immediately after the hero, don’t explain everything.
+
+Give the recruiter a 10-second summary.
+
+Heading
+
+One platform. Multiple operational surfaces.
+
+Copy
+
+Nubinno Connect was designed as a centralized operational layer for managing business data across users, companies, jobs and analytics.
+
+Then four cards:
+
+Users
+
+Manage profiles, roles, status, activity and account relationships from a centralized workspace.
+
+Companies
+
+Explore pharmaceutical company records, attributes, relationships and business information.
+
+Jobs
+
+Manage job-related data and connect users to their relevant positions and organizations.
+
+Analytics
+
+Turn operational and external analytics data into visual dashboards and actionable reporting.
+
+These capabilities are directly reflected in the repository’s documented feature set and dashboard areas.  
+
+⸻
+
+03 — THE PLATFORM
+
+Now explain what the product actually does.
+
+Eyebrow
+
+THE PLATFORM
+
+Heading
+
+From raw business data to operational insight.
+
+Copy
+
+Nubinno Connect combines application workflows, business data and analytics into a single interface. Instead of forcing teams to move between disconnected systems, the platform provides a common operational layer for managing the information that drives day-to-day decisions.
+
+Then use a horizontal flow:
+
+DATA
+  ↓
+USERS
+  ↓
+COMPANIES
+  ↓
+JOBS
+  ↓
+ANALYTICS
+  ↓
+OPERATIONS
+  ↓
+DECISIONS
+
+Or visually:
+
+┌──────────┐
+│  Users   │
+└────┬─────┘
+     │
+┌────▼─────┐
+│Companies │
+└────┬─────┘
+     │
+┌────▼─────┐
+│   Jobs   │
+└────┬─────┘
+     │
+┌────▼─────┐
+│Analytics │
+└────┬─────┘
+     │
+┌────▼─────┐
+│Operations│
+└──────────┘
+
+⸻
+
+04 — ANALYTICS
+
+This should be the hero feature after the hero.
+
+You specifically want the recruiter to understand:
+
+“This is a serious analytics dashboard.”
+
+So make this section large.
+
+Eyebrow
+
+ANALYTICS
+
+Heading
+
+See the business, not just the data.
+
+Copy
+
+The analytics layer turns operational activity and Google Analytics 4 data into a visual dashboard for monitoring users, sessions, page activity, geography and other business metrics.
+
+The repository specifically documents GA4 metrics including active users, new users, sessions, page views, top pages and users by country.
+
+Visual
+
+Use your analytics screenshot at approximately:
+
+width: 100%
+max-width: 1200px
+
+with subtle shadow.
+
+Then underneath, three small capabilities:
+
+LIVE METRICS
+Track important activity from one workspace.
+VISUAL REPORTING
+Turn raw metrics into charts and trends.
+CACHED DATA
+Reduce repeated analytics requests with
+short-lived metric caching.
+
+The README/code analysis documents the GA4 integration and a 300-second in-memory cache strategy.
+
+⸻
+
+05 — OPERATIONS
+
+Now show the actual application.
+
+Heading
+
+Built for operations, not just visualization.
+
+Copy
+
+Analytics is only one layer of Nubinno Connect. The platform also provides operational workflows for managing users, companies and jobs.
+
+Then a 2 × 2 screenshot grid.
+
+┌─────────────────────┐  ┌─────────────────────┐
+│                     │  │                     │
+│       USERS         │  │      COMPANIES      │
+│      SCREEN         │  │       SCREEN        │
+│                     │  │                     │
+└─────────────────────┘  └─────────────────────┘
+┌─────────────────────┐  ┌─────────────────────┐
+│                     │  │                     │
+│        JOBS         │  │      ANALYTICS      │
+│       SCREEN        │  │       SCREEN        │
+│                     │  │                     │
+└─────────────────────┘  └─────────────────────┘
+
+User management
+
+Create, update and manage user records while tracking roles, status and associated business information.
+
+Company management
+
+Maintain structured company information and connect organizations to their users and operational data.
+
+Job management
+
+Surface job-related information and connect positions with the people and companies they belong to.
+
+Analytics
+
+Monitor application and business activity through interactive charts and reporting.
+
+⸻
+
+06 — THE DATA ARCHITECTURE
+
+This is where you shift from product designer to engineer.
+
+Don’t bury this in the bottom.
+
+Eyebrow
+
+UNDER THE HOOD
+
+Heading
+
+Two databases. One application.
+
+Copy
+
+The platform uses a hybrid persistence architecture rather than forcing authentication and business data into the same storage model.
+
+Then this huge diagram:
+
+                         NUBINNO CONNECT
+                               │
+                         DJANGO APPLICATION
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+                 ▼                           ▼
+          ┌──────────────┐           ┌──────────────┐
+          │   MongoDB    │           │ PostgreSQL   │
+          │              │           │              │
+          │ Authentication│          │ Business     │
+          │ Sessions     │           │ Data         │
+          │ User Accounts│           │ Users        │
+          │              │           │ Companies    │
+          └──────────────┘           │ Jobs         │
+                                     └──────────────┘
+
+The repository explicitly describes MongoDB as the authentication/session store and PostgreSQL as the business-data store.
+
+Small explanation
+
+MongoDB
+
+Flexible document storage for authentication records and session state.
+
+PostgreSQL
+
+Structured relational storage for users, companies, jobs and business records.
+
+Django
+
+The application layer coordinating authentication, authorization, business logic, APIs and presentation.
+
+⸻
+
+07 — AUTHENTICATION + RBAC
+
+This is a good recruiter section because it demonstrates that you understand more than CRUD.
+
+Heading
+
+Access is part of the architecture.
+
+Copy
+
+Nubinno Connect implements custom authentication and role-based access control so the application can distinguish between administrative, managerial and standard user workflows.
+
+Then:
+
+LOGIN
+  ↓
+MONGODB USER
+  ↓
+PASSWORD VERIFICATION
+  ↓
+SESSION CREATED
+  ↓
+SESSION TOKEN
+  ↓
+MIDDLEWARE
+  ↓
+ROLE CHECK
+  ↓
+AUTHORIZED WORKSPACE
+
+Then three cards:
+
+Admin
+
+Full administrative access including user management and privileged operations.
+
+Manager
+
+Operational access for managing users and administrative workflows.
+
+User
+
+Restricted access to the parts of the platform relevant to their role.
+
+The documented architecture uses MongoDB-backed sessions and custom middleware to validate sessions on requests.
+
+⸻
+
+08 — REQUEST FLOW
+
+This can be a beautiful GSAP section.
+
+Heading
+
+Every request has a path.
+
+Show the animation:
+
+BROWSER
+   ↓
+SECURITY MIDDLEWARE
+   ↓
+SESSION
+   ↓
+MONGO SESSION
+   ↓
+AUTHENTICATION
+   ↓
+URL ROUTING
+   ↓
+VIEW
+   ↓
+ROLE VALIDATION
+   ↓
+DATABASE
+   ↓
+RESPONSE
+
+Then small caption:
+
+Django middleware handles security and session state before application logic determines what data the user can access and how the response should be generated.
+
+This is directly supported by the documented request flow.
+
+⸻
+
+09 — AUTOMATION + INTEGRATIONS
+
+This deserves its own section because it’s one of the things that separates the project from a simple dashboard.
+
+Heading
+
+The dashboard doesn’t stop at the screen.
+
+Copy
+
+Nubinno Connect connects operational events with supporting services so important actions can trigger communication, analytics or secure data access.
+
+Three cards:
+
+Email automation
+
+Automated HTML and plain-text notifications for account creation, role changes and account lifecycle events.
+
+Google Analytics 4
+
+External analytics data is surfaced inside the application’s reporting layer.
+
+Secure database access
+
+SSH tunneling supports secure access to remote PostgreSQL infrastructure.
+
+The repository documents email automation, GA4 integration and SSH tunneling as core platform capabilities.
+
+⸻
+
+10 — EMAIL SYSTEM
+
+Don’t make this huge.
+
+Use one screenshot.
+
+Heading
+
+Important events shouldn’t disappear.
+
+Copy
+
+The platform includes automated transactional email workflows for user lifecycle events, including account creation and role changes.
+
+Then:
+
+ADMIN ACTION
+     ↓
+USER CREATED
+     ↓
+EMAIL GENERATED
+     ↓
+BRANDED TEMPLATE
+     ↓
+USER NOTIFIED
+
+Then two small examples:
+
+ACCOUNT CREATED
+Welcome + account information
+ROLE UPDATED
+Previous role → New role
+
+This is much better than dumping the entire email implementation documentation.
+
+⸻
+
+11 — DATA EXPORT
+
+Heading
+
+Data should remain portable.
+
+Copy
+
+Operational data can be exported for external analysis, reporting and downstream workflows through CSV/TXT export capabilities.
+
+Then visually:
+
+DATABASE
+    ↓
+FILTER
+    ↓
+SELECT
+    ↓
+EXPORT
+    ↓
+CSV / TXT
+
+One small button-style visual:
+
+↓ Export data
+
+⸻
+
+12 — SECURITY + ENGINEERING REALITY
+
+This section is important, but do not pretend the repository is production-perfect.
+
+The code analysis identifies strengths such as environment-based configuration, CSRF middleware, custom session tracking and role-based access, while also identifying areas requiring hardening, including SHA-256 password hashing, some CSRF exemptions, rate limiting and endpoint authorization.
+
+For the portfolio, phrase this maturely.
+
+Heading
+
+Built with security in mind — and honest about the tradeoffs.
+
+Copy
+
+Security was treated as an application concern rather than a final checklist. The project includes environment-based configuration, CSRF protection, session tracking, role-based access and secure remote database connectivity.
+
+Then:
+
+ENVIRONMENT VARIABLES
+        +
+CSRF PROTECTION
+        +
+SESSION MANAGEMENT
+        +
+RBAC
+        +
+SSH DATABASE ACCESS
+
+Important:
+
+Don’t put:
+
+“Enterprise-grade security”
+
+on the page.
+
+That’s an overclaim given the code-analysis findings.
+
+Instead:
+
+Security considerations built into the architecture.
+
+That sounds much more credible.
+
+⸻
+
+13 — ENGINEERING CHALLENGES
+
+This is where you can make the project impressive.
+
+Heading
+
+The interesting part was making the pieces work together.
+
+Three cards.
+
+01 — Hybrid persistence
+
+Designing application flows around two different database systems required clear separation between authentication state and business data.
+
+02 — Custom authentication
+
+Authentication was implemented around MongoDB-backed user records and session state rather than relying solely on Django’s default user model.
+
+03 — Remote data access
+
+PostgreSQL connectivity supports SSH tunneling and fallback connection strategies for development and remote environments.
+
+Then a small fourth:
+
+04 — Analytics integration
+
+External GA4 metrics needed to be transformed into dashboard-friendly data while limiting repeated requests through caching.
+
+This tells a recruiter:
+
+“I solved integration problems.”
+
+Not:
+
+“I made some pages.”
+
+⸻
+
+14 — TECHNOLOGY STACK
+
+Keep it clean.
+
+Heading
+
+Built with a pragmatic full-stack architecture.
+
+Don’t use giant technology-logo walls.
+
+Use grouped rows.
+
+Backend
+
+Python
+Django 5.2.7
+Django ORM
+Custom Middleware
+REST-style APIs
+
+Data
+
+PostgreSQL
+MongoDB
+SQLite
+MongoEngine
+psycopg2
+
+Frontend
+
+Django Templates
+HTML
+CSS
+JavaScript
+AJAX
+Responsive UI
+
+Infrastructure & integrations
+
+Google Analytics 4
+SMTP / Office365
+SSH Tunneling
+python-dotenv
+Paramiko
+
+The documented stack confirms Django/Python, MongoDB/PostgreSQL/SQLite, Django templates, vanilla JavaScript/AJAX, GA4, SMTP and SSH tooling.
+
+⸻
+
+15 — PROJECT SCALE
+
+This is where your existing metrics can work.
+
+Don’t make them fake-looking animated counters.
+
+Use a simple horizontal strip:
+
+~8K+
+LINES OF CODE
+50+
+API ENDPOINTS*
+2
+DATABASE SYSTEMS
+12
+HTML TEMPLATES
+23
+DEPENDENCIES
+
+But there is an important detail.
+
+Your documentation has different endpoint counts in different places — the README says 50+ RESTful endpoints, while the code analysis describes 23+ API endpoints.
+
+Therefore, for the website I recommend not showing “50+” unless you verify exactly what counts as an endpoint.
+
+Use:
+
+8K+
+documented codebase
+2
+database systems
+12
+HTML templates
+23+
+documented API routes
+
+That is safer.
+
+⸻
+
+16 — “WHAT I BUILT”
+
+This is the recruiter section.
+
+It should explicitly connect the project to your engineering ability.
+
+Heading
+
+More than a dashboard.
+
+Copy
+
+I designed and implemented a full-stack platform that combines application workflows, analytics, authentication, data management and external integrations into one operational system.
+
+Then:
+
+FULL-STACK DEVELOPMENT
+Django + Python + JavaScript
+BACKEND ARCHITECTURE
+APIs + middleware + business logic
+DATABASE ENGINEERING
+MongoDB + PostgreSQL
+AUTHENTICATION
+Custom sessions + RBAC
+DATA VISUALIZATION
+GA4 + interactive analytics
+INTEGRATIONS
+Email + SSH + external analytics
+DATA OPERATIONS
+CSV / TXT export workflows
+PRODUCT ENGINEERING
+Responsive operational interface
+
+This is the section where the recruiter thinks:
+
+Okay. This person actually built systems.
+
+⸻
+
+17 — THE “WHY IT MATTERS” SECTION
+
+Keep this very short.
+
+Heading
+
+Designed around the workflow, not the database.
+
+Copy
+
+The goal wasn’t simply to expose tables through a web interface. Nubinno Connect connects data management, authentication, analytics and operational workflows into a single product experience.
+
+Then:
+
+DATA
+↓
+SYSTEM
+↓
+WORKFLOW
+↓
+INSIGHT
+↓
+ACTION
+
+That’s your product thesis.
+
+⸻
+
+18 — FINAL PRODUCT SHOWCASE
+
+Now bring back the strongest screenshot.
+
+Large.
+
+Almost full viewport.
+
+                 NUBINNO CONNECT
+             Enterprise data, connected.
+       ┌───────────────────────────────────┐
+       │                                   │
+       │         DASHBOARD SCREEN          │
+       │                                   │
+       └───────────────────────────────────┘
+
+Then:
+
+A unified operational layer for users, companies, jobs and analytics.
+
+⸻
+
+19 — FINAL CTA
+
+Don’t write “Thanks for visiting.”
+
+Use:
+
+Explore the system.
+
+[ VIEW GITHUB → ]
+[ VIEW OTHER PROJECTS → ]
+
+Then:
+
+NUBINNO CONNECT
+Enterprise Analytics & Operations Platform
+Django · Python · PostgreSQL · MongoDB
+
+⸻
+
+The navigation
+
+Keep the nav extremely simple.
+
+NUBINNO CONNECT
+Overview
+Platform
+Analytics
+Architecture
+Engineering
+                    GitHub →
+
+Do not have:
+
+Home
+About
+Features
+Technology
+Documentation
+Architecture
+Security
+Database
+API
+Contact
+...
+
+That’s a portfolio project page, not a product.
+
+⸻
+
+The actual 10-second recruiter experience
+
+This is the part I would optimize hardest.
+
+When they land:
+
+0–2 seconds
+
+They see:
+
+Enterprise data, connected.
+
+and the dashboard screenshot.
+
+2–5 seconds
+
+They see:
+
+Users · Companies · Jobs · Analytics
+
+5–8 seconds
+
+They see:
+
+Django · PostgreSQL · MongoDB
+
+8–10 seconds
+
+They see:
+
+Two databases. One application.
+
+At that point they already understand:
+
+what it is + what it does + that it’s technically substantial.
+
+Everything below is for the recruiter who wants to investigate further.
+
+⸻
+
+Motion design
+
+This should not be a crazy GSAP website.
+
+Use maybe 5 major animations.
+
+Animation 1 — Hero
+
+Dashboard screenshot:
+
+opacity 0 → 1
+scale 0.96 → 1
+y 40 → 0
+
+Very subtle.
+
+Animation 2 — Product cards
+
+As they enter viewport:
+
+Users
+Companies
+Jobs
+Analytics
+
+stagger by ~80ms.
+
+Animation 3 — Architecture
+
+Pin the architecture diagram.
+
+As scrolling occurs:
+
+Django
+   ↓
+MongoDB       PostgreSQL
+   ↓              ↓
+Authentication   Business Data
+
+Lines illuminate progressively.
+
+Animation 4 — Request pipeline
+
+Browser
+ ↓
+Middleware
+ ↓
+Auth
+ ↓
+View
+ ↓
+Database
+ ↓
+Response
+
+Each stage appears as the user scrolls.
+
+Animation 5 — Final screenshot
+
+Slow scale:
+
+0.97 → 1
+
+Nothing more.
+
+⸻
+
+Visual language from your redesign reference
+
+The style reference you provided is actually a very good fit for this project.
+
+Use:
+
+* white canvas
+* near-black typography
+* restrained blue accent
+* Inter / InterDisplay
+* 10–14px cards
+* subtle shadows
+* 80–120px section rhythm
+* real product screenshots
+* no stock imagery
+* restrained iconography
+
+The supplied reference explicitly defines a 1440px max-width, 80–120px section spacing, 24px card padding, restrained 10px controls, and product screenshots as the primary visual treatment.  
+
+I would keep that visual system almost exactly rather than inventing another aesthetic.
+
+⸻
+
+One change I would make to the reference
+
+Your project is analytics-heavy.
+
+So I would introduce one additional visual language:
+
+Data blue
+
+Use the reference’s cobalt:
+
+#266DF0
+
+for:
+
+* chart highlights
+* active filters
+* selected states
+* architecture connections
+* links
+* analytics emphasis
+
+But don’t turn the entire website blue.
+
+The reference’s core philosophy is exactly right: one accent should do the talking while the rest remains quiet.  
+
+⸻
+
+What I would NOT put on the website
+
+This is just as important.
+
+Don’t put:
+
+❌ 50+ API endpoint list
+❌ every database field
+❌ installation instructions
+❌ .env setup
+❌ SSH commands
+❌ every dependency
+❌ 20 screenshots
+❌ every README heading
+❌ raw code
+❌ giant architecture diagrams immediately
+❌ security vulnerabilities prominently
+❌ “enterprise-grade” everywhere
+❌ meaningless statistics
+❌ fake performance benchmarks
+
+Those belong in the repository/documentation.
+
+Your portfolio needs to curate the engineering story.
+
+⸻
+
+The final page hierarchy
+
+So the actual page should look like this:
+
+┌─────────────────────────────────────────────┐
+│ NUBINNO CONNECT       Platform Architecture │
+├─────────────────────────────────────────────┤
+│                                             │
+│          ENTERPRISE DATA, CONNECTED.        │
+│                                             │
+│    Full-stack analytics & operations        │
+│    platform for pharmaceutical workflows.  │
+│                                             │
+│       [ Product ] [ GitHub ]               │
+│                                             │
+│        ┌───────────────────────┐            │
+│        │                       │            │
+│        │   MAIN DASHBOARD      │            │
+│        │                       │            │
+│        └───────────────────────┘            │
+│                                             │
+├─────────────────────────────────────────────┤
+│ ONE PLATFORM. MULTIPLE SURFACES.            │
+│                                             │
+│ Users | Companies | Jobs | Analytics        │
+├─────────────────────────────────────────────┤
+│ FROM RAW DATA TO OPERATIONAL INSIGHT        │
+│                                             │
+│              DATA → INSIGHT                 │
+├─────────────────────────────────────────────┤
+│ ANALYTICS                                   │
+│                                             │
+│ SEE THE BUSINESS, NOT JUST THE DATA.        │
+│                                             │
+│        [ BIG ANALYTICS SCREEN ]             │
+├─────────────────────────────────────────────┤
+│ OPERATIONS                                  │
+│                                             │
+│ Users     Companies                         │
+│ Jobs      Analytics                         │
+├─────────────────────────────────────────────┤
+│ TWO DATABASES. ONE APPLICATION.             │
+│                                             │
+│       Django                                │
+│       /       \                             │
+│ MongoDB    PostgreSQL                       │
+├─────────────────────────────────────────────┤
+│ ACCESS IS PART OF THE ARCHITECTURE.         │
+│                                             │
+│ Login → Session → RBAC → Workspace          │
+├─────────────────────────────────────────────┤
+│ EVERY REQUEST HAS A PATH.                   │
+│                                             │
+│ Browser → Middleware → View → DB → Response │
+├─────────────────────────────────────────────┤
+│ AUTOMATION + INTEGRATIONS                   │
+│                                             │
+│ Email | GA4 | SSH                           │
+├─────────────────────────────────────────────┤
+│ DATA SHOULD REMAIN PORTABLE.                │
+│                                             │
+│ CSV / TXT Export                            │
+├─────────────────────────────────────────────┤
+│ ENGINEERING CHALLENGES                      │
+│                                             │
+│ Hybrid DB | Auth | Remote DB | Analytics    │
+├─────────────────────────────────────────────┤
+│ TECHNOLOGY                                  │
+│                                             │
+│ Python · Django · PostgreSQL · MongoDB      │
+│ JavaScript · GA4 · SMTP · SSH               │
+├─────────────────────────────────────────────┤
+│ WHAT I BUILT                                │
+│                                             │
+│ Full-stack · Backend · Data · Auth · APIs   │
+├─────────────────────────────────────────────┤
+│                                             │
+│             EXPLORE THE SYSTEM             │
+│                                             │
+│            [ VIEW GITHUB → ]                │
+│                                             │
+└─────────────────────────────────────────────┘
+
+My strongest recommendation
+
+Don’t call this page “NC Dashboard.”
+
+That’s underselling the project.
+
+Use:
+
+Nubinno Connect
+
+with:
+
+Enterprise Analytics & Operations Platform
+
+And in the hero:
+
+Enterprise data, connected.
+
+Because the repository itself describes Nubinno Connect as a broader platform covering users, companies, jobs, analytics, authentication, email and data operations—not merely a dashboard.
+
+That positioning is what will make the recruiter immediately see “full-stack product + backend architecture + databases + analytics + authentication” instead of “student made a dashboard.”

@@ -1,0 +1,921 @@
+THE "STARTUP-GRADE PROJECT PAGE"
+
+Think of the entire page as a story:
+
+ATTENTION
+   ↓
+UNDERSTANDING
+   ↓
+PRODUCT
+   ↓
+PROOF
+   ↓
+TECHNICAL DEPTH
+   ↓
+CREDIBILITY
+   ↓
+ACTION
+
+Not:
+
+Hero → Features → Footer
+
+That's a generic SaaS template.
+
+Your page should tell the story of why this thing deserves to exist.
+
+01 — THE NAVIGATION
+
+Keep it extremely minimal.
+
+┌──────────────────────────────────────────────────────────────┐
+│  SPARSH / PROJECTS        Overview  Product  Architecture   │
+│                                      GitHub     ↗ Portfolio  │
+└──────────────────────────────────────────────────────────────┘
+
+For example, on RIGEL:
+
+RIGEL -- MK-I
+
+
+Overview   Product   Architecture   Demo
+
+
+                         GitHub ↗
+
+Don't put 15 navigation items.
+
+The navigation should help someone jump around the story.
+
+02 — HERO
+
+This is the most important screen.
+
+The visitor should understand the project in approximately 5 seconds.
+
+Structure
+                 [ CATEGORY ]
+
+
+             RIGEL -- MK-I
+
+
+     The Intelligence Layer
+     for Personal Computing.
+
+
+  Portable • Private • Context-Aware • Offline AI
+
+
+       [ View Demo ]   [ GitHub ↗ ]
+
+
+     Rust · Next.js · SQLite · llama.cpp
+
+
+              ┌───────────────┐
+              │               │
+              │ PRODUCT UI    │
+              │               │
+              └───────────────┘
+Critical rule
+
+Show the actual product.
+
+Don't make the hero:
+
+"The future of intelligent computing."
+
+with some random glowing sphere.
+
+The hero should show:
+
+What you built.
+
+YC's own design review specifically stresses getting visitors to the live demo and showing a "feat of strength."
+
+03 — THE ONE-SENTENCE EXPLANATION
+
+Immediately after the hero:
+
+RIGEL is a portable local AI environment that brings models, memory, retrieval and developer workflows into a single offline-first runtime.
+
+Then maybe:
+
+Built for
+Developers · AI Engineers · Local AI workflows
+
+This is your clarity checkpoint.
+
+If someone reads only the hero + this section, they should already know what the project is.
+
+04 — THE "WHY"
+
+Now tell the story.
+
+Why I built it
+
+Don't say:
+
+"I wanted to learn Rust."
+
+Instead:
+
+Cloud AI is powerful.
+
+
+But it introduces dependencies on:
+Internet connectivity
+External APIs
+Cloud infrastructure
+Vendor-specific systems
+
+
+I wanted to explore a different model:
+
+
+AI that lives closer to the developer.
+
+Then:
+
+The problem
+Cloud
+   ↓
+API
+   ↓
+Internet
+   ↓
+External infrastructure
+
+versus:
+
+Local Machine
+      ↓
+   RIGEL
+      ↓
+ Model + Memory + Retrieval
+
+This is where the product begins to feel like a startup idea, rather than a college project.
+
+05 — THE SOLUTION
+
+Big statement:
+
+One environment. Your models. Your context. Your workflow.
+
+Then show the system visually.
+
+                    RIGEL
+                      │
+       ┌──────────────┼──────────────┐
+       ↓              ↓              ↓
+   AI Runtime       Memory          RAG
+       │              │              │
+       └──────────────┼──────────────┘
+                      ↓
+               Developer Workspace
+
+This should be highly visual.
+
+06 — PRODUCT SHOWCASE
+
+Now stop talking.
+
+Show the product.
+
+This is something excellent startup websites do extremely well: the interface becomes the marketing material. Linear's current site, for example, repeatedly uses real interface states and product workflows to explain the product.
+
+For your page:
+
+              THE PRODUCT
+
+
+       ┌──────────────────────────┐
+       │                          │
+       │     BIG SCREENSHOT       │
+       │                          │
+       │                          │
+       └──────────────────────────┘
+
+
+       Model Manager
+       Memory
+       Chat
+       Workspace
+       Settings
+
+Use huge screenshots.
+
+Not tiny cards.
+
+07 — "SEE IT IN ACTION"
+
+This is where you put the 60–90 second demo.
+
+┌────────────────────────────────────────────┐
+│                                            │
+│              ▶ WATCH DEMO                  │
+│                                            │
+│           [ 90 SECOND VIDEO ]              │
+│                                            │
+└────────────────────────────────────────────┘
+
+Under it:
+
+From launch → model selection → context retrieval → response.
+
+This is especially valuable for projects that aren't conveniently deployable.
+
+08 — KEY FEATURES
+
+Now reveal the important capabilities.
+
+Don't do 15 cards.
+
+Do 4–6.
+
+For example:
+
+01
+LOCAL AI RUNTIME
+
+
+Run GGUF models locally without
+depending on a remote inference API.
+
+
+
+
+02
+CONTEXT + MEMORY
+
+
+Maintain useful context across
+interactions and sessions.
+
+
+
+
+03
+RAG ENGINE
+
+
+Retrieve relevant project information
+before generating responses.
+
+
+
+
+04
+PORTABLE RUNTIME
+
+
+Designed around a portable
+development environment.
+
+
+
+
+05
+HARDWARE DETECTION
+
+
+Adapt runtime configuration
+to the available machine.
+
+
+
+
+06
+DEVELOPER WORKFLOW
+
+
+Connect local intelligence
+with development tools.
+
+Each feature gets:
+
+statement → visual → technical detail
+
+09 — FEATURE DEEP DIVE
+
+This is where you become Apple + technical startup.
+
+Instead of:
+
+Feature 1
+Feature 2
+Feature 3
+
+Do:
+
+┌─────────────────────────────────────────────┐
+│                                             │
+│       MEMORY THAT UNDERSTANDS CONTEXT       │
+│                                             │
+│       [ UI / DIAGRAM ]                      │
+│                                             │
+│       Conversation                          │
+│            ↓                                │
+│       Memory extraction                     │
+│            ↓                                │
+│       Storage                               │
+│            ↓                                │
+│       Retrieval                             │
+│            ↓                                │
+│       Context builder                       │
+│                                             │
+└─────────────────────────────────────────────┘
+
+This is much more compelling.
+
+10 — HOW IT WORKS
+
+Now give the technical workflow.
+
+For RIGEL:
+
+USER
+  ↓
+NEXT.JS UI
+  ↓
+LOCAL API
+  ↓
+AI DECISION ENGINE
+  ↓
+┌─────────────┬─────────────┐
+│             │             │
+MEMORY       RAG         MODEL
+│             │             │
+└─────────────┴─────────────┘
+              ↓
+         RESPONSE
+
+For a RAG project:
+
+DOCUMENT
+   ↓
+PARSING
+   ↓
+CHUNKING
+   ↓
+EMBEDDINGS
+   ↓
+VECTOR STORE
+   ↓
+RETRIEVAL
+   ↓
+CONTEXT
+   ↓
+LLM
+   ↓
+ANSWER + SOURCES
+
+This section changes the perception from:
+
+"Nice UI."
+
+to:
+
+"This person understands systems."
+
+11 — ARCHITECTURE
+
+Now go deeper.
+
+Have a dedicated:
+
+System Architecture
+
+And show:
+
+Frontend
+   │
+   ↓
+API Layer
+   │
+   ├───────────────┐
+   ↓               ↓
+Application      AI Layer
+Logic              │
+                   ├── Model
+                   ├── Retrieval
+                   └── Memory
+   │
+   ↓
+Persistence
+
+You can make this interactive.
+
+For example:
+
+Hover node → show technology + responsibility.
+
+That would be a very premium touch.
+
+12 — TECH STACK
+
+Don't make:
+
+[React] [Next] [Python] [Rust] [Mongo] [GitHub]
+
+That's beginner portfolio style.
+
+Instead:
+
+TECHNOLOGY
+
+
+Frontend
+Next.js · React · TypeScript · Tailwind
+
+
+Backend
+Rust · Axum · Python
+
+
+AI
+llama.cpp · GGUF · RAG · Embeddings
+
+
+Storage
+SQLite · Vector Store
+
+
+Infrastructure
+Vercel · GitHub · Local Runtime
+
+And underneath each category:
+
+Why I chose it
+
+That is significantly stronger.
+
+13 — ENGINEERING CHALLENGES
+
+This is one of your highest-value sections.
+
+Use:
+
+THE HARD PART
+
+
+01
+Portable filesystem constraints
+
+
+02
+Local database write permissions
+
+
+03
+Model lifecycle management
+
+
+04
+Runtime initialization
+
+
+05
+Cross-platform behavior
+
+Then pick 2–3 and explain them.
+
+Example:
+
+Challenge
+
+Running the application from external storage introduced read/write constraints for runtime databases.
+
+Approach
+
+Separated immutable application assets from writable runtime data and changed initialization around the writable location.
+
+Result
+
+The application can initialize its runtime state without modifying the packaged application files.
+
+That is excellent interview material.
+
+14 — BEFORE / AFTER
+
+This is a very startup-style section.
+
+BEFORE
+
+
+Multiple tools
+Separate models
+External APIs
+No persistent context
+
+
+
+
+AFTER
+
+
+              PROJECT
+                 │
+       ┌─────────┼─────────┐
+       │         │         │
+      AI       Memory     RAG
+       │         │         │
+       └─────────┼─────────┘
+                 │
+           One workflow
+
+It communicates value instantly.
+
+15 — RESULTS / PROOF
+
+If you have actual metrics, show them.
+
+258 MB
+Default Model
+
+
+6
+Core Modules
+
+
+100%
+Local Inference
+
+Only use real numbers.
+
+Never manufacture startup-style statistics just because they look good.
+
+If there aren't useful metrics:
+
+Current state
+
+Functional prototype with local model execution, retrieval, memory and developer workflows.
+
+That's completely fine.
+
+16 — DESIGN / PRODUCT DETAILS
+
+This is an optional premium section.
+
+Show:
+
+DESIGN SYSTEM
+
+
+Typography
+Inter / Geist / etc.
+
+
+Color
+#...
+
+
+Spacing
+...
+
+
+Components
+...
+
+
+Motion
+...
+
+For a particularly UI-heavy project, this is excellent.
+
+It demonstrates that you didn't just code it — you designed it.
+
+17 — GALLERY
+
+Use a cinematic product gallery.
+
+Not:
+
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+
+Instead:
+
+                 PRODUCT GALLERY
+
+
+        ┌─────────────────────────────┐
+        │                             │
+        │        Main Interface       │
+        │                             │
+        └─────────────────────────────┘
+
+
+
+
+      ┌─────────────┐   ┌─────────────┐
+      │ Memory      │   │ Models      │
+      └─────────────┘   └─────────────┘
+
+
+
+
+      ┌─────────────────────────────┐
+      │       Developer Workspace   │
+      └─────────────────────────────┘
+18 — DEVELOPMENT STORY
+
+This is something I'd add specifically because you're a developer, not a company.
+
+How I built it
+01 — Research
+02 — Architecture
+03 — Core implementation
+04 — AI integration
+05 — Memory/RAG
+06 — UI
+07 — Packaging
+08 — Deployment
+
+Then maybe:
+
+X weeks / months of development
+
+Only if you want to disclose it.
+
+19 — LESSONS
+
+Very short.
+
+WHAT I LEARNED
+
+
+Building the system forced me to think beyond
+individual features and design the runtime,
+storage, AI orchestration and developer
+experience as one system.
+
+This gives personality.
+
+20 — ROADMAP
+
+Don't make fake startup promises.
+
+Use:
+
+NEXT
+
+
+○ Cross-platform runtime improvements
+○ Better hardware optimization
+○ Improved model management
+○ More developer integrations
+21 — FINAL CTA
+
+This should feel like the end of a product launch.
+
+Huge:
+
+Explore the implementation.
+
+Then:
+
+[ GitHub ↗ ]     [ Try Demo ↗ ]
+
+And:
+
+RIGEL -- MK-I
+
+
+Built by Sparsh Sharma
+THE FULL PAGE
+
+So your complete page becomes:
+
+┌──────────────────────────────────────┐
+│ NAV                                  │
+├──────────────────────────────────────┤
+│                                      │
+│ HERO                                 │
+│ Project Name                         │
+│ Positioning                          │
+│ CTA                                  │
+│ Product UI                           │
+│                                      │
+├──────────────────────────────────────┤
+│ ONE-SENTENCE EXPLANATION             │
+├──────────────────────────────────────┤
+│ WHY                                  │
+│ Problem                              │
+├──────────────────────────────────────┤
+│ SOLUTION                             │
+├──────────────────────────────────────┤
+│ PRODUCT SHOWCASE                     │
+├──────────────────────────────────────┤
+│ DEMO VIDEO                           │
+├──────────────────────────────────────┤
+│ KEY FEATURES                         │
+├──────────────────────────────────────┤
+│ FEATURE DEEP DIVES                   │
+├──────────────────────────────────────┤
+│ HOW IT WORKS                         │
+├──────────────────────────────────────┤
+│ ARCHITECTURE                         │
+├──────────────────────────────────────┤
+│ TECH STACK                           │
+├──────────────────────────────────────┤
+│ ENGINEERING CHALLENGES               │
+├──────────────────────────────────────┤
+│ BEFORE / AFTER                       │
+├──────────────────────────────────────┤
+│ RESULTS / PROOF                      │
+├──────────────────────────────────────┤
+│ DESIGN SYSTEM                        │
+├──────────────────────────────────────┤
+│ PRODUCT GALLERY                      │
+├──────────────────────────────────────┤
+│ DEVELOPMENT STORY                    │
+├──────────────────────────────────────┤
+│ LESSONS                              │
+├──────────────────────────────────────┤
+│ ROADMAP                              │
+├──────────────────────────────────────┤
+│ FINAL CTA                            │
+├──────────────────────────────────────┤
+│ FOOTER                               │
+└──────────────────────────────────────┘
+
+But you should NOT necessarily use every section on every project.
+
+That's important.
+
+THE "ADAPTIVE" PART
+
+Your project engine should have different page configurations.
+
+Simple project
+Hero
+→ Overview
+→ Features
+→ Screenshots
+→ Tech
+→ GitHub
+Full-stack project
+Hero
+→ Problem
+→ Solution
+→ Product
+→ Features
+→ Architecture
+→ API
+→ Database
+→ Challenges
+→ Demo
+→ GitHub
+RAG project
+Hero
+→ Problem
+→ Solution
+→ RAG Pipeline
+→ Retrieval Demo
+→ Architecture
+→ Evaluation
+→ Tech Stack
+→ Demo
+→ GitHub
+AI/Research project
+Hero
+→ Problem
+→ Approach
+→ Model
+→ Pipeline
+→ Experiments
+→ Results
+→ Limitations
+→ Demo
+→ GitHub
+UI/Frontend project
+Hero
+→ Design Goal
+→ Interaction
+→ Product Showcase
+→ Design System
+→ Motion
+→ Responsive Design
+→ Tech Stack
+→ Demo
+
+Same engine. Different story.
+
+That's the sophisticated approach.
+
+THE VISUAL LANGUAGE
+
+Now, when you say "Silicon Valley / YC premium", don't interpret that as:
+
+❌ Gradients everywhere
+❌ Glassmorphism everywhere
+❌ 3D objects everywhere
+❌ 30 animations
+❌ Huge glowing text
+❌ Excessive rounded cards
+
+Instead:
+
+1. Typography
+
+Huge, confident headlines.
+
+Something like:
+
+The intelligence layer for personal computing.
+
+Not 4 paragraphs.
+
+2. Massive whitespace
+
+Give important things room.
+
+3. Real product UI
+
+This is probably the single biggest thing.
+
+Your product screenshots are your marketing.
+
+4. Restrained color
+
+One project-specific accent.
+
+RIGEL could use your existing orange identity.
+
+A RAG project might use a different accent.
+
+5. Motion
+
+Use motion to explain:
+
+scroll
+   ↓
+architecture node appears
+   ↓
+connection draws
+   ↓
+product screenshot transitions
+
+Not:
+
+Everything flies around because animation looks cool.
+
+6. Progressive disclosure
+
+First:
+
+What is it?
+
+Then:
+
+Why does it matter?
+
+Then:
+
+How does it work?
+
+Then:
+
+How did you build it?
+
+Then:
+
+Can I see it?
+
+That's the right information hierarchy.
+
+THE MOST IMPORTANT RULE
+
+YC's design review makes a particularly useful point: don't make the visitor work to figure out what you're showing them. The review specifically focuses on whether the intended product pitch comes through quickly and whether the site gets visitors to the product/demo.
+
+So your project page should pass this test:
+
+At 5 seconds:
+
+Do I know what this is?
+
+At 20 seconds:
+
+Do I know why it exists?
+
+At 45 seconds:
+
+Do I understand the major features?
+
+At 90 seconds:
+
+Do I understand how it works?
+
+At 2–3 minutes:
+
+Do I believe this person actually engineered it?
+
+At the end:
+
+Can I see the code/demo immediately?
+
+If yes → you've built the right page.
