@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { MagneticButton } from '@/components/magnetic-button';
 import { BouncyFooter } from '@/components/bouncy-footer';
 import { PinnedProjects } from '@/components/pinned-projects';
+import { AboutSection } from '@/components/about-section';
 import { ExperienceSection } from '@/components/experience';
 import { SkillsCertifications } from '@/components/skills-certifications';
 import { SectionDivider } from '@/components/section-divider';
@@ -57,7 +58,7 @@ export default function V2Page() {
         </div>
 
         {/* Hero Title Area */}
-        <div className="mb-12">
+        <div className="mb-12 min-h-[85vh] flex flex-col justify-center pb-20">
           <h1
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#6b8eff] leading-[0.9] tracking-tight mb-8 drop-shadow-sm break-words hyphens-auto"
             style={{ fontFamily: '"VT323", monospace', fontSmooth: 'never', WebkitFontSmoothing: 'none' }}
@@ -89,25 +90,8 @@ export default function V2Page() {
 
         <SectionDivider />
 
-        {/* Two Column Content Area */}
-        <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] lg:grid-cols-[150px_1fr] gap-8 md:gap-16">
-          <div className="text-[#6b8eff] text-sm tracking-widest uppercase" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
-            ABOUT ME
-          </div>
-
-          <div className="text-[#d1d5db] font-serif text-lg md:text-xl leading-relaxed lg:columns-2 gap-12" style={{ fontFamily: 'var(--font-playfair)' }}>
-            <p className="mb-8">
-              <span className="float-left text-6xl text-[#6b8eff] pr-2 font-bold leading-none mt-1 drop-shadow-sm" style={{ fontFamily: '"VT323", monospace' }}>I</span>
-              &apos;m a passionate Full-Stack Developer and AI Engineer currently pursuing my B.Tech in Computer Science Engineering at ITM Skills University. With a strong foundation in software engineering, artificial intelligence, and machine learning, I specialize in building scalable, enterprise-grade web applications and cutting-edge AI-driven solutions.
-            </p>
-            <p className="mb-8">
-              Currently serving as a Software Developer Intern at Code N Creative, where I develop production-grade web tools and work across full-stack modules. Previously, I interned at Let&apos;s Upgrade, where I enhanced UI accessibility by 12% and optimized website performance, resulting in a 10% increase in user engagement and admissions.
-            </p>
-            <p className="mb-0">
-              My expertise spans modern web technologies including React.js, Node.js, Express.js, and MongoDB, along with advanced AI/ML frameworks. I&apos;m actively involved in tech communities (GDG Mumbai, Swift Mumbai, MTW), contribute to open-source projects, and build innovative, production-ready applications that solve real-world problems.
-            </p>
-          </div>
-        </div>
+        {/* Scroll Reveal About Section */}
+        <AboutSection />
 
         <SectionDivider />
 

@@ -19,16 +19,16 @@ export const projects: Project[] = [
     image: "/RIGEL-MK-I.png",
     bgColor: "bg-gradient-to-r from-gray-900 to-black",
     githubLink: "https://github.com/itsparsh10/RIGEL",
-    details: "Persistent AI Intelligence: Built a memory-native AI workspace that retains conversations, project context, preferences, and important information across sessions, enabling intelligence to compound instead of resetting with every chat. Advanced Local AI Architecture: Engineered a Rust-powered AI backend with local GGUF model execution, intelligent context building, memory retrieval, and document-aware reasoning for private, offline AI workflows. Portable AI Infrastructure: Developed a self-contained runtime that can operate from local storage, SSDs, or USB drives with pre-compiled launchers for Windows, macOS, and Linux—turning compatible computers into personal AI workspaces. Privacy-First Developer Workspace: Unified AI models, persistent memory, documents, projects, tools, and conversations into a React and TypeScript interface with offline-first execution, zero mandatory cloud dependency, and complete user-controlled data."
+    details: "Portable AI Runtime: Runs the AI workspace directly from portable storage. Local Intelligence: GGUF models + llama.cpp provide local inference. Persistent Context: Memory and retrieval systems maintain context across sessions. Developer Workspace: Local API, VS Code integration and workspace tooling."
   },
   {
     category: "Logistics Network & DSU System",
     title: "Delivery Warehouse Connectivity System",
-    description: "An optimized C++ logistics connectivity system that uses Disjoint Set Union (Union-Find) to efficiently track warehouse networks, merge regional delivery zones, and generate structured connectivity mappings for large-scale logistics infrastructure.",
+    description: "From complex warehouse connections to one intelligent, scalable network. A high-performance C++ connectivity engine using Disjoint Set Union to efficiently merge warehouse networks, identify regional zones, detect isolated facilities, and generate structured connectivity insights.",
     image: "/Warehouse-System.png",
     bgColor: "bg-gradient-to-br from-blue-700 to-blue-900",
     githubLink: "https://github.com/itsparsh10/itsparsh10-Delivery-Warehouse-Connectivity-System-DSA-III-Project-By-Sparsh-Sharma-37",
-    details: "Optimized Connectivity Engine: Engineered a high-performance Disjoint Set Union (DSU) system with Path Compression and Union-by-Rank, enabling near-constant amortized (O(\\alpha(N))) warehouse connectivity queries. Scalable Logistics Architecture: Designed a network model for grouping distributed warehouses into unified delivery zones and efficiently processing batch connectivity merges across regional logistics networks. Advanced Network Management: Implemented connectivity strategies for large-scale infrastructure changes, including batch graph merges, offline processing concepts, dynamic connectivity analysis, and DSU rebuild workflows. Automated Zone Mapping: Built a structured delivery zone reporting system that identifies connected components, maps warehouses to regional zones, detects isolated facilities, and generates actionable network connectivity summaries."
+    // details: "Optimized Connectivity Engine: Engineered a high-performance Disjoint Set Union (DSU) system with Path Compression and Union-by-Rank, enabling near-constant amortized (O(\\alpha(N))) warehouse connectivity queries. Scalable Logistics Architecture: Designed a network model for grouping distributed warehouses into unified delivery zones and efficiently processing batch connectivity merges across regional logistics networks. Advanced Network Management: Implemented connectivity strategies for large-scale infrastructure changes, including batch graph merges, offline processing concepts, dynamic connectivity analysis, and DSU rebuild workflows. Automated Zone Mapping: Built a structured delivery zone reporting system that identifies connected components, maps warehouses to regional zones, detects isolated facilities, and generates actionable network connectivity summaries."
   },
   {
     category: "AI-Powered Face Recognition Attendance System",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     bgColor: "bg-gradient-to-b from-blue-500 to-blue-700",
     liveLink: "https://markzy-ai.vercel.app/",
     githubLink: "https://github.com/itsparsh10/Markzy.ai",
-    details: "State-of-the-Art AI Platform: Revolutionary Next.js-powered SaaS platform featuring 100+ specialized AI tools delivering real-time, high-converting content across social media, email, SEO, ads, and sales channels with enterprise-grade precision. Advanced AI Architecture: Built on cutting-edge large language models (GPT-4 & Claude) with intelligent content generation, delivering platform-tailored copy optimized for maximum conversion rates and engagement. Enterprise-Grade Infrastructure: Seamless Stripe payment integration, advanced team collaboration tools, comprehensive performance analytics, and enterprise security protocols for scalable, mission-critical marketing operations. Intelligent Content Production: Transforms marketing workflows into lightning-fast, infinitely scalable, AI-driven content production, boosting conversions by 40% and saving 10+ hours weekly through automated optimization."
+    // details: "State-of-the-Art AI Platform: Revolutionary Next.js-powered SaaS platform featuring 100+ specialized AI tools delivering real-time, high-converting content across social media, email, SEO, ads, and sales channels with enterprise-grade precision. Advanced AI Architecture: Built on cutting-edge large language models (GPT-4 & Claude) with intelligent content generation, delivering platform-tailored copy optimized for maximum conversion rates and engagement. Enterprise-Grade Infrastructure: Seamless Stripe payment integration, advanced team collaboration tools, comprehensive performance analytics, and enterprise security protocols for scalable, mission-critical marketing operations. Intelligent Content Production: Transforms marketing workflows into lightning-fast, infinitely scalable, AI-driven content production, boosting conversions by 40% and saving 10+ hours weekly through automated optimization."
   },
   {
     category: "AI Assistant",
@@ -77,15 +77,6 @@ export const projects: Project[] = [
     details: "Breakthrough RAG Architecture: State-of-the-art Retrieval-Augmented Generation system transforming PDFs into intelligent, searchable knowledge bases with deep semantic understanding, context-aware responses, and advanced neural language processing. High-Performance Vector Database: FAISS-powered distributed vector database with ultra-precise AI embeddings enabling sub-millisecond similarity search across massive document collections with enterprise-scale performance. Google Gemini AI Integration: Leverages cutting-edge Google Gemini for precise, intelligent answer generation with advanced natural language understanding, semantic analysis, and contextual reasoning capabilities. Multi-Modal Intelligence: Revolutionary text, voice, and image search capabilities providing intuitive, flexible document interaction for seamless knowledge discovery with advanced computer vision and speech recognition."
   },
   {
-    category: "AI Analysis Platform",
-    title: "VisionSpeak AI",
-    description: "Advanced transcription, emotion detection, and presentation coaching platform that transforms videos into actionable insights using cutting-edge AI.",
-    image: "/VisionSpeak-Ai.png",
-    bgColor: "bg-white",
-    githubLink: "https://github.com/itsparsh10/VisionSpeak-AI",
-    details: "Breakthrough Multi-Language Transcription: OpenAI Whisper-powered state-of-the-art engine with 99+ language support, 95%+ accuracy, advanced speaker diarization, and word-level timestamp precision for enterprise-grade transcription. Advanced AI Analysis Pipeline: Google Gemini-enhanced sophisticated text processing with real-time emotion detection (85%+ accuracy), deep sentiment analysis, and intelligent content enhancement using neural networks. Comprehensive Presentation Coaching: Cutting-edge analytics combining MediaPipe pose detection, advanced gesture tracking, eye contact analysis, and voice dynamics for holistic, data-driven performance insights. Enterprise-Grade Django Architecture: Highly scalable backend processing MP4/AVI/MOV/MP3/WAV formats at ~0.1x video length with 30+ FPS emotion recognition, parallel processing, and distributed computing capabilities."
-  },
-  {
     category: "Dashboard & Analytics Platform",
     title: "NC Dashboard",
     slug: "ncDashboard",
@@ -94,7 +85,16 @@ export const projects: Project[] = [
     bgColor: "bg-white",
     liveLink: "https://analytics.nubinnoconnect.com/users/",
     githubLink: "https://github.com/itsparsh10/NC-Dashboard",
-    details: "Real-Time PostgreSQL RDS Analytics: Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL RDS for instant, actionable insights. Dual Database Architecture: Revolutionary hybrid microservices architecture combining PostgreSQL RDS for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations. Advanced RESTful API: Comprehensive RESTful API endpoints with intelligent pagination, advanced filtering, rate limiting, and standardized JSON responses for users, companies, jobs, and analytics management. Enterprise User Management: Complete CRUD operations with advanced filtering, full-text search capabilities, bulk CSV import/export, and automated email system integration with SMTP configuration."
+    // details: "Real-Time PostgreSQL RDS Analytics: Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL RDS for instant, actionable insights. Dual Database Architecture: Revolutionary hybrid microservices architecture combining PostgreSQL RDS for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations. Advanced RESTful API: Comprehensive RESTful API endpoints with intelligent pagination, advanced filtering, rate limiting, and standardized JSON responses for users, companies, jobs, and analytics management. Enterprise User Management: Complete CRUD operations with advanced filtering, full-text search capabilities, bulk CSV import/export, and automated email system integration with SMTP configuration."
+  },
+  {
+    category: "AI Analysis Platform",
+    title: "VisionSpeak AI",
+    description: "An AI presentation coach that analyzes your recorded presentation for speech, emotion, body language, and delivery, then turns those insights—powered by Gemini for highly accurate analysis—into actionable feedback to help you present with greater clarity and confidence.",
+    image: "/VisionSpeak-Ai.png",
+    bgColor: "bg-white",
+    githubLink: "https://github.com/itsparsh10/VisionSpeak-AI",
+    // details: "Breakthrough Multi-Language Transcription: OpenAI Whisper-powered state-of-the-art engine with 99+ language support, 95%+ accuracy, advanced speaker diarization, and word-level timestamp precision for enterprise-grade transcription. Advanced AI Analysis Pipeline: Google Gemini-enhanced sophisticated text processing with real-time emotion detection (85%+ accuracy), deep sentiment analysis, and intelligent content enhancement using neural networks. Comprehensive Presentation Coaching: Cutting-edge analytics combining MediaPipe pose detection, advanced gesture tracking, eye contact analysis, and voice dynamics for holistic, data-driven performance insights. Enterprise-Grade Django Architecture: Highly scalable backend processing MP4/AVI/MOV/MP3/WAV formats at ~0.1x video length with 30+ FPS emotion recognition, parallel processing, and distributed computing capabilities."
   },
   {
     category: "Communication Analytics Platform",
@@ -123,6 +123,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/itsparsh10/Voice-Video-to-Script",
     details: "OpenAI Whisper Transcription Engine: State-of-the-art multi-language transcription with 95%+ accuracy, automatic accent adaptation, intelligent audio quality optimization, and advanced noise reduction algorithms. Real-Time Processing Architecture: Near-instant transcription with smart optimization, delivering results immediately after upload without queueing or delays using distributed computing and parallel processing. Enterprise Django Backend: Highly scalable microservices architecture with robust security, real-time admin dashboard, comprehensive user management, and advanced role-based access control (RBAC). Intuitive Cross-Platform Design: Elegant drag-and-drop interface with smooth animations, responsive design, and progressive web app capabilities for seamless desktop, tablet, and mobile experience."
   },
+/*
   {
     category: "MERN Project",
     title: "Meesho",
@@ -150,6 +151,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/itsparsh10/FinED",
     details: "AI-Powered Financial Education: Revolutionary platform combining advanced AI-powered learning modules with interactive content, adaptive algorithms, and personalized recommendations for accessible, engaging financial education. Comprehensive Learning Ecosystem: Advanced financial challenges, comprehensive educational resources, and sophisticated real-world simulations designed for measurable, data-driven skill development. Professional Development Focus: Intelligent platform with machine learning algorithms designed for young professionals to level up their financial future through personalized learning paths and progress tracking."
   },
+  */
 ];
 
 // Helper function to find project by title (case-insensitive, partial match)
