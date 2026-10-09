@@ -5,7 +5,7 @@ const steps = [
   "Chunking & Embeddings",
   "FAISS Vector DB",
   "Gemini RAG Engine",
-  "Multi-Modal Answers"
+  "Answers"
 ];
 
 export function KobyAiVisual() {
