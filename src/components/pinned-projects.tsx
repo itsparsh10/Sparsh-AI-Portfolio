@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { projects } from '@/lib/projects';
 import { ChevronDown, ChevronUp, ArrowUpRight } from 'lucide-react';
 import { RigelWorkflowStory } from '@/projects/rigel/components/rigel-workflow-story';
+import { EcommerceSupportVisual } from '@/components/project-visuals/ecommerce-support-visual';
+import { KobyAiVisual } from '@/components/project-visuals/koby-ai-visual';
 import { MarkzyVisual } from '@/components/project-visuals/markzy-visual';
 import { NCDashboardVisual } from '@/components/project-visuals/nc-dashboard-visual';
 import { DeliveryWarehouseVisual } from '@/components/project-visuals/delivery-warehouse-visual';
@@ -19,11 +21,50 @@ export function PinnedProjects() {
 
   const topProjectTitles = [
     "RIGEL — MK-I",
+    "E-commerce Support Resolution Agent",
+    "Koby's AI",
     "Markzy",
     "NC Dashboard",
+    "VisionSpeak AI",
+    "U-Speak",
+    "AttendIQ",
     "Delivery Warehouse Connectivity System",
-    "VisionSpeak AI"
+    "Munim Ji",
+    "Mygate",
+    "Voice & Video to Script"
   ];
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const filterParam = params.get('filter') || params.get('category');
+      if (filterParam) {
+        const normalized = filterParam.toLowerCase().replace(/[-_]/g, ' ');
+        if (normalized.includes('ai')) setFilter('AI Projects');
+        else if (normalized.includes('full') || normalized.includes('stack')) setFilter('Full Stack');
+        else if (normalized.includes('system')) setFilter('Systems');
+        else if (normalized === 'all') setFilter('All');
+      }
+    }
+  }, []);
+
+  const handleFilterChange = (f: string) => {
+    setFilter(f);
+    setShowMore(false);
+    setExpandedIndex(null);
+
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      const slugMap: Record<string, string> = {
+        'All': 'all',
+        'AI Projects': 'ai-projects',
+        'Full Stack': 'full-stack',
+        'Systems': 'systems'
+      };
+      url.searchParams.set('filter', slugMap[f] || f);
+      window.history.pushState({}, '', url.toString());
+    }
+  };
 
   const getFilteredProjects = () => {
     let baseProjects = projects;
@@ -38,17 +79,22 @@ export function PinnedProjects() {
         p.category.includes('AI') ||
         p.title.includes('AI') ||
         p.slug === 'rigel' ||
+        p.slug === 'ecommerce-support-agent' ||
+        p.slug === 'koby-ai' ||
         p.title.includes('AttendIQ') ||
         p.title.includes('Support') ||
         p.title.includes('Voice') ||
         p.title.includes('FinEd') ||
-        p.title.includes('Markzy')
+        p.title.includes('Markzy') ||
+        p.title.includes('VisionSpeak') ||
+        p.title.includes('U-Speak')
       );
     } else if (filter === 'Full Stack') {
       baseProjects = projects.filter(p =>
         p.category.includes('Full-Stack') ||
         p.category.includes('MERN') ||
         p.category.includes('E-commerce') ||
+        p.slug === 'ecommerce-support-agent' ||
         p.title.includes('Munim Ji') ||
         p.title.includes('Mygate') ||
         p.title.includes('Meesho') ||
@@ -61,7 +107,8 @@ export function PinnedProjects() {
         p.category.includes('Management') ||
         p.category.includes('Dashboard') ||
         p.title.includes('Delivery') ||
-        p.slug === 'ncDashboard'
+        p.slug === 'ncDashboard' ||
+        p.slug === 'rigel'
       );
     }
     return baseProjects;
@@ -71,7 +118,7 @@ export function PinnedProjects() {
   const visibleProjects = showMore ? filteredProjects : filteredProjects.slice(0, 5);
 
   return (
-    <div className="w-full relative my-32">
+    <div id="projects" className="w-full relative my-32">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
         <div className="text-[#6b8eff] text-sm tracking-widest uppercase" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
           Things I&apos;ve Built
@@ -81,14 +128,10 @@ export function PinnedProjects() {
           {['All', 'AI Projects', 'Full Stack', 'Systems'].map(f => (
             <button
               key={f}
-              onClick={() => {
-                setFilter(f);
-                setShowMore(false);
-                setExpandedIndex(null);
-              }}
+              onClick={() => handleFilterChange(f)}
               className={`px-4 py-2 text-xs font-mono tracking-widest rounded-full transition-all ${filter === f
-                  ? 'bg-[#6b8eff] text-[#0a0d1a] border border-[#6b8eff] font-bold shadow-[0_0_15px_rgba(107,142,255,0.3)]'
-                  : 'border border-[#2d3748] text-[#7a8190] hover:border-[#6b8eff] hover:text-[#6b8eff]'
+                ? 'bg-[#6b8eff] text-[#0a0d1a] border border-[#6b8eff] font-bold shadow-[0_0_15px_rgba(107,142,255,0.3)]'
+                : 'border border-[#2d3748] text-[#7a8190] hover:border-[#6b8eff] hover:text-[#6b8eff]'
                 }`}
             >
               {f}
@@ -182,6 +225,18 @@ export function PinnedProjects() {
                   {project.slug === 'rigel' && (
                     <div className="mb-12 mt-8">
                       <RigelWorkflowStory />
+                    </div>
+                  )}
+
+                  {project.slug === 'ecommerce-support-agent' && (
+                    <div className="mb-12 mt-8">
+                      <EcommerceSupportVisual />
+                    </div>
+                  )}
+
+                  {project.slug === 'koby-ai' && (
+                    <div className="mb-12 mt-8">
+                      <KobyAiVisual />
                     </div>
                   )}
 

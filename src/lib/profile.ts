@@ -60,7 +60,7 @@ export const profileData = {
     frameworks: ["ReactJS", "Next.js", "Node.js", "Express.js", "Django", "Django REST Framework"],
     databases: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "FAISS (Vector Database)"],
     aiTools: ["Google Gemini", "OpenAI Whisper", "MediaPipe", "RAG (Retrieval-Augmented Generation)", "Vector Search"],
-    cloudServices: ["AWS RDS", "Firebase", "Vercel"],
+    cloudServices: ["AWS", "Firebase", "Vercel"],
     integrations: ["Stripe", "RESTful API", "GraphQL"],
     versionControl: ["Git", "GitHub"],
     dataStructures: ["CS Fundamentals", "Data Structures and Algorithms", "OOPS"],

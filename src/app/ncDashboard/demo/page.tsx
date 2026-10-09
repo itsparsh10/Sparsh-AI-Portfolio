@@ -40,7 +40,8 @@ const tableData = [
 
 // --- SECTION: JOBS ---
 const JobsSection = () => (
-  <div dangerouslySetInnerHTML={{ __html: `<body class="bg-gray-50 min-h-screen">
+  <div dangerouslySetInnerHTML={{
+    __html: `<body class="bg-gray-50 min-h-screen">
 <!-- Include Navigation -->
     {% include 'nc_app/nav.html' %}
 
@@ -53,7 +54,7 @@ const JobsSection = () => (
 <div class="bg-gradient-to-r from-primary-600 to-primary-800 rounded-t-2xl shadow-xl">
 <div class="px-6 py-8 text-center text-white">
 <h1 class="text-4xl font-bold mb-2">NC Jobs Database</h1>
-<p class="text-primary-100 text-lg">Live job postings from PostgreSQL RDS</p>
+<p class="text-primary-100 text-lg">Live job postings from PostgreSQL</p>
             {% if connection_status == 'connected' %}
                     <div class="mt-4 inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full border border-green-300/30">
 <svg class="w-5 h-5 mr-2" fill="currentColor" viewbox="0 0 20 20">
@@ -221,8 +222,8 @@ const UsersSection = () => {
     <div className="p-6 md:p-8 max-w-[1600px] mx-auto font-sans bg-white">
       <div className="bg-[#2546b5] text-white rounded-xl p-8 text-center mb-8">
         <h1 className="text-3xl font-bold mb-2">NC Users Database</h1>
-        <p className="text-blue-100 mb-4">Live data from PostgreSQL RDS</p>
-        
+        <p className="text-blue-100 mb-4">Live data from PostgreSQL</p>
+
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-2 text-left">
@@ -259,7 +260,7 @@ const UsersSection = () => {
         <div className="bg-[#f8fafc] border border-gray-100 rounded-xl p-6 flex flex-col items-center">
           <h2 className="text-xl font-semibold mb-6 text-slate-800 text-center">User Job Positions</h2>
           <div className="h-[300px] w-[90%]">
-            <Bar data={barData} options={{...barOptions, maintainAspectRatio: false}} />
+            <Bar data={barData} options={{ ...barOptions, maintainAspectRatio: false }} />
           </div>
         </div>
       </div>
@@ -267,7 +268,7 @@ const UsersSection = () => {
       <div className="flex flex-col xl:flex-row gap-4 justify-between items-center mb-6">
         <div className="relative w-full xl:w-96">
           <input type="text" placeholder="Search users by name, email, job title, or ID..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="bg-white w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </div>
         <div className="flex flex-wrap gap-2">
           {['All Users', 'Verified Client', 'Non-Verified Client', 'Pending'].map(f => (
@@ -325,7 +326,8 @@ const UsersSection = () => {
 
 // --- SECTION: ANALYTICS ---
 const AnalyticsSection = () => (
-  <div dangerouslySetInnerHTML={{ __html: `<main class="max-w-7xl mx-auto px-6 pt-24 pb-16">
+  <div dangerouslySetInnerHTML={{
+    __html: `<main class="max-w-7xl mx-auto px-6 pt-24 pb-16">
 <!-- Page header -->
 <div class="flex items-start justify-between mb-8">
 <div>
@@ -425,8 +427,8 @@ const CompanySection = () => {
     <div className="flex flex-col min-h-screen bg-[#f8f9fa]">
       <div className="bg-[#3b5bdb] text-white py-8 px-6 rounded-t-xl mb-6 flex flex-col items-center mx-4 mt-4">
         <h1 className="text-3xl font-bold mb-2">NC Companies Database</h1>
-        <p className="text-blue-100 mb-4">Live data from PostgreSQL RDS</p>
-        
+        <p className="text-blue-100 mb-4">Live data from PostgreSQL</p>
+
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 px-4 mb-8">
@@ -465,7 +467,7 @@ const CompanySection = () => {
       <div className="flex flex-col xl:flex-row gap-4 items-center justify-between mx-4 mb-6">
         <div className="relative w-full xl:w-96">
           <input type="text" placeholder="Search companies by name, type, role, company role, location..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="bg-white w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl outline-none focus:border-blue-500" />
-          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </div>
         <div className="flex flex-wrap gap-2 w-full xl:w-auto">
           {['All Companies', 'Active', 'Inactive', 'Suspended', 'Deleted'].map(f => (
@@ -554,7 +556,7 @@ const DistributionMarketSection = () => {
     { id: 9, company: 'Test2 Pharma', country: 'Test', warehouse: 1, sales: 0, hasWarehouse: 'Yes' },
     { id: 10, company: 'Fosun Pharma Sp. z o.o.', country: 'Poland', warehouse: 1, sales: 0, hasWarehouse: 'Yes' },
     { id: 11, company: 'Axcount Generika GmbH', country: 'Germany', warehouse: 1, sales: 0, hasWarehouse: 'Yes' },
-    { id: 12, company: 'Other (1)', country: 'Other', warehouse: 4, sales: 2000000000, hasWarehouse: 'Yes' }, 
+    { id: 12, company: 'Other (1)', country: 'Other', warehouse: 4, sales: 2000000000, hasWarehouse: 'Yes' },
   ];
 
   const filteredRecords = allRecords.filter(r => {
@@ -569,8 +571,8 @@ const DistributionMarketSection = () => {
     <div className="flex flex-col min-h-screen bg-[#f8f9fa]">
       <div className="bg-[#2453c9] text-white py-8 px-6 rounded-t-xl mb-6 flex flex-col items-center mx-4 mt-4">
         <h1 className="text-3xl font-bold mb-2">NC Distribution Market</h1>
-        <p className="text-blue-100 mb-4">Live data from PostgreSQL RDS</p>
-        
+        <p className="text-blue-100 mb-4">Live data from PostgreSQL</p>
+
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mb-8">
@@ -607,12 +609,12 @@ const DistributionMarketSection = () => {
         <h3 className="text-center font-semibold text-lg mb-6">Brand name VS no. of Company</h3>
         <div className="h-[200px]"><Bar data={brandsData} options={brandsOptions} /></div>
       </div>
-      
+
       {/* Search and Table */}
       <div className="flex flex-col xl:flex-row gap-4 items-center justify-between mx-4 mb-6">
         <div className="relative w-full xl:w-96">
           <input type="text" placeholder="Search distribution data..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="bg-white w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl outline-none focus:border-blue-500" />
-          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </div>
         <div className="flex flex-wrap gap-2 w-full xl:w-auto">
           {['All Records', 'With Warehouse', 'No Warehouse'].map(f => (
@@ -661,7 +663,7 @@ const DistributionMarketSection = () => {
 const InterestSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('All Records');
-  
+
   const interestData = {
     labels: ['Other (113)', 'Nikola Sakalou', 'Alena Zlobina', 'Igor Bolotov', 'Stefan Ries', 'Hadi Tarek', 'Omkar Joshi', 'Iryna Radchenko', 'Philip Tyczynski', 'yehor hhh', 'Prokhor Antropov', 'Cynthia chen', 'Christian Stock'],
     datasets: [{ label: 'Number of Interests', data: [17, 8, 4, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1], backgroundColor: '#10B981' }],
@@ -683,7 +685,7 @@ const InterestSection = () => {
     { id: 11, user: 'Cynthia chen', interests: 1, global: 'Yes', atc: 'J01' },
     { id: 12, user: 'Christian Stock', interests: 1, global: 'No', atc: 'L01' },
     ...Array.from({ length: 114 }).map((_, i) => ({
-      id: i + 13, user: `Other User ${i+1}`, interests: 1, global: 'No', atc: 'M01'
+      id: i + 13, user: `Other User ${i + 1}`, interests: 1, global: 'No', atc: 'M01'
     }))
   ];
 
@@ -699,8 +701,8 @@ const InterestSection = () => {
     <div className="flex flex-col min-h-screen bg-[#f8f9fa]">
       <div className="bg-[#2453c9] text-white py-8 px-6 rounded-t-xl mb-6 flex flex-col items-center mx-4 mt-4">
         <h1 className="text-3xl font-bold mb-2">NC Interest</h1>
-        <p className="text-blue-100 mb-4">Live data from PostgreSQL RDS</p>
-        
+        <p className="text-blue-100 mb-4">Live data from PostgreSQL</p>
+
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mb-8">
@@ -726,12 +728,12 @@ const InterestSection = () => {
         <h3 className="text-center font-semibold text-lg mb-6">User name V/S No. of Interest</h3>
         <div className="h-[300px]"><Bar data={interestData} options={options} /></div>
       </div>
-      
+
       {/* Search and Table */}
       <div className="flex flex-col xl:flex-row gap-4 items-center justify-between mx-4 mb-6">
         <div className="relative w-full xl:w-96">
           <input type="text" placeholder="Search interests data..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="bg-white w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl outline-none focus:border-blue-500" />
-          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </div>
         <div className="flex flex-wrap gap-2 w-full xl:w-auto">
           {['All Records', 'Global', 'Local'].map(f => (
@@ -801,7 +803,7 @@ const ConnectTokenSection = () => {
     { id: 6, user: 'Stefan Ries', tokens: 6, status: 'Active', lastUsed: '2023-10-08' },
     { id: 7, user: 'Iryna Radchenko', tokens: 5, status: 'Active', lastUsed: '2023-10-07' },
     ...Array.from({ length: 257 }).map((_, i) => ({
-      id: i + 8, user: `Other User ${i+1}`, tokens: 1, status: i % 4 === 0 ? 'Inactive' : 'Active', lastUsed: '2023-01-01'
+      id: i + 8, user: `Other User ${i + 1}`, tokens: 1, status: i % 4 === 0 ? 'Inactive' : 'Active', lastUsed: '2023-01-01'
     }))
   ];
 
@@ -815,8 +817,8 @@ const ConnectTokenSection = () => {
     <div className="flex flex-col min-h-screen bg-[#f8f9fa]">
       <div className="bg-[#2453c9] text-white py-8 px-6 rounded-t-xl mb-6 flex flex-col items-center mx-4 mt-4">
         <h1 className="text-3xl font-bold mb-2">NC Connect Token</h1>
-        <p className="text-blue-100 mb-4">Live data from PostgreSQL RDS</p>
-        
+        <p className="text-blue-100 mb-4">Live data from PostgreSQL</p>
+
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mb-8">
@@ -874,7 +876,7 @@ const ConnectTokenSection = () => {
       <div className="flex flex-col xl:flex-row gap-4 items-center justify-between mx-4 mb-6">
         <div className="relative w-full xl:w-96">
           <input type="text" placeholder="Search token data..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="bg-white w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl outline-none focus:border-blue-500" />
-          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </div>
         <div className="flex flex-wrap gap-2 w-full xl:w-auto">
           {['All Tokens', 'Active', 'Inactive'].map(f => (
@@ -882,7 +884,7 @@ const ConnectTokenSection = () => {
           ))}
         </div>
       </div>
-      
+
       <div className="text-sm text-gray-500 mb-4 mx-4">Showing {filteredRecords.length} records</div>
 
       <div className="bg-white border border-slate-200 mx-4 rounded-xl overflow-x-auto shadow-sm mb-10">
@@ -934,20 +936,20 @@ export default function NCDemoPage() {
 
       <nav className={`bg-white border-r border-slate-200 h-full flex flex-col shadow-sm z-10 flex-shrink-0 transition-all duration-300 ${isSidebarOpen ? 'w-64' : 'w-16'}`}>
         <div className={`h-16 flex items-center border-b border-slate-200 ${isSidebarOpen ? 'px-6 justify-between' : 'justify-center'}`}>
-            {isSidebarOpen && <span className="font-semibold text-lg text-slate-800 tracking-tight whitespace-nowrap overflow-hidden">NC Dashboard</span>}
-            <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-1 rounded-md text-slate-500 hover:bg-slate-100 transition-colors">
-              {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
+          {isSidebarOpen && <span className="font-semibold text-lg text-slate-800 tracking-tight whitespace-nowrap overflow-hidden">NC Dashboard</span>}
+          <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-1 rounded-md text-slate-500 hover:bg-slate-100 transition-colors">
+            {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
         <div className="flex-1 overflow-y-auto py-4 px-3 space-y-2">
           {/* Requested Order: Users, Jobs, Company, Interest, Distribution Market, Connect Token. And Analytics. */}
-          
+
           <button onClick={() => setActiveTab('users')} className={getBtnClass('users')} title="Users">
             <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
             {isSidebarOpen && <span>Users</span>}
           </button>
 
-          
+
 
           <button onClick={() => setActiveTab('company')} className={getBtnClass('company')} title="Company">
             <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -969,19 +971,19 @@ export default function NCDemoPage() {
             {isSidebarOpen && <span>Connect Token</span>}
           </button>
 
-          
+
 
         </div>
       </nav>
       <div className="flex-1 overflow-auto bg-slate-50 relative">
         <div className="min-w-[800px]">
           {activeTab === 'users' && <UsersSection />}
-          
+
           {activeTab === 'company' && <CompanySection />}
           {activeTab === 'interest' && <InterestSection />}
           {activeTab === 'distribution_market' && <DistributionMarketSection />}
           {activeTab === 'connect_token' && <ConnectTokenSection />}
-          
+
         </div>
       </div>
     </div>

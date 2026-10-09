@@ -7,7 +7,7 @@ export function ExperienceSection() {
         <div className="text-[#333333] font-bold text-sm tracking-widest uppercase mb-12" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
           Experience & Internships
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {profileData.experience.map((job, idx) => (
             <div key={idx} className="flex flex-col border border-[#d0caba] bg-white/50 backdrop-blur-sm rounded-xl p-6 md:p-8 hover:bg-white transition-colors group relative overflow-hidden shadow-sm hover:shadow-md">
@@ -20,7 +20,7 @@ export function ExperienceSection() {
                       <img src={job.logo} alt={job.company} className="w-full h-full object-contain p-1" />
                     </div>
                   )}
-                  
+
                   <div className="flex flex-col justify-center">
                     <h3 className="text-2xl md:text-3xl text-[#0a0d1a] tracking-wider uppercase group-hover:text-[#3182ce] transition-colors" style={{ fontFamily: '"VT323", monospace' }}>
                       {job.company}
@@ -30,13 +30,13 @@ export function ExperienceSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-[10px] md:text-xs text-[#718096] font-bold uppercase tracking-widest lg:text-right mt-2 lg:mt-0" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
                   <div className="whitespace-nowrap">{job.period}</div>
                   {job.location && <div className="mt-1 opacity-80">{job.location}</div>}
                 </div>
               </div>
-              
+
               {/* Bullet points */}
               <div className="space-y-4 mt-4 border-t border-[#d0caba]/50 pt-6">
                 {job.points.map((point, i) => (

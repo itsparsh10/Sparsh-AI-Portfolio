@@ -28,10 +28,10 @@ const projectsData = [
   {
     category: "Dashboard & Analytics Platform",
     title: "NC Dashboard",
-    description: "A comprehensive Django-based dashboard platform with PostgreSQL RDS integration, featuring real-time user analytics, interactive charts, and advanced user management capabilities.",
+    description: "A comprehensive Django-based dashboard platform with PostgreSQL integration, featuring real-time user analytics, interactive charts, and advanced user management capabilities.",
     liveLink: "https://analytics.nubinnoconnect.com/users/",
     githubLink: "https://github.com/itsparsh10/NC-Dashboard",
-    details: "Real-Time PostgreSQL RDS Analytics: Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL RDS for instant, actionable insights. Dual Database Architecture: Revolutionary hybrid microservices architecture combining PostgreSQL RDS for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations. Advanced RESTful API: Comprehensive RESTful API endpoints with intelligent pagination, advanced filtering, rate limiting, and standardized JSON responses for users, companies, jobs, and analytics management. Enterprise User Management: Complete CRUD operations with advanced filtering, full-text search capabilities, bulk CSV import/export, and automated email system integration with SMTP configuration."
+    details: "Real-Time PostgreSQL Analytics: Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL for instant, actionable insights. Dual Database Architecture: Revolutionary hybrid microservices architecture combining PostgreSQL for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations. Advanced RESTful API: Comprehensive RESTful API endpoints with intelligent pagination, advanced filtering, rate limiting, and standardized JSON responses for users, companies, jobs, and analytics management. Enterprise User Management: Complete CRUD operations with advanced filtering, full-text search capabilities, bulk CSV import/export, and automated email system integration with SMTP configuration."
   },
   {
     category: "Communication Analytics Platform",
@@ -105,7 +105,7 @@ Programming Languages: C++, Python, JavaScript, TypeScript, Machine Learning, Ar
 Frameworks: ReactJS, Next.js, Node.js, Express.js, Django, Django REST Framework
 Databases: MySQL, PostgreSQL, MongoDB, Firebase, FAISS (Vector Database)
 AI Tools: Google Gemini, OpenAI Whisper, MediaPipe, RAG (Retrieval-Augmented Generation), Vector Search
-Cloud Services: AWS RDS, Firebase, Vercel
+Cloud Services: , Firebase, Vercel
 Integrations: Stripe, RESTful API, GraphQL
 Version Control: Git, GitHub
 Core Concepts: CS Fundamentals, Data Structures and Algorithms, OOPS

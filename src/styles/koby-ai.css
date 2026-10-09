@@ -1,0 +1,401 @@
+/*
+ * Koby's AI — Project Page Styles
+ * MotherDuck Design System — Neo-Brutalist Crayon Terminal on Cream Paper (https://motherduck.com/)
+ */
+
+.koby-ai-page {
+  /* Colors */
+  --koby-cream-paper: #f4efea;
+  --koby-frost-white: #ffffff;
+  --koby-chalk-gray: #f8f8f7;
+  --koby-ice-wash: #ebf9ff;
+  --koby-notebook-pale: #f9fbe7;
+  --koby-charcoal-ink: #383838;
+  --koby-pencil-gray: #a1a1a1;
+  --koby-graphite: #818181;
+  --koby-soft-silver: #c0c0c0;
+  --koby-sky-crayon: #6fc2ff;
+  --koby-canary-banner: #ffde00;
+  --koby-duck-bill-orange: #ff9538;
+
+  /* Sketch Outlines */
+  --koby-coral-sketch: #f38e84;
+  --koby-peach-sketch: #f5b161;
+  --koby-mint-sketch: #38c1b0;
+  --koby-lilac-sketch: #b291de;
+  --koby-lime-sketch: #b3c419;
+  --koby-periwinkle-sketch: #7597ee;
+  --koby-slate-sketch: #84a6bc;
+  --koby-marigold-sketch: #e1c427;
+
+  /* Typography */
+  --koby-font-mono: 'JetBrains Mono', 'Space Mono', 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Layout & Geometry */
+  --koby-max-w: 1200px;
+  --koby-section-gap: 80px;
+  --koby-radius: 2px;
+  --koby-border: 2px solid #383838;
+  --koby-shadow: -6px 6px 0px 0px #383838;
+
+  background-color: var(--koby-cream-paper);
+  color: var(--koby-charcoal-ink);
+  font-family: var(--koby-font-mono);
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+.koby-ai-page ::selection {
+  background: var(--koby-canary-banner);
+  color: var(--koby-charcoal-ink);
+}
+
+body:has(.koby-ai-page) #themeToggle {
+  display: none !important;
+}
+
+:root {
+  --header-mobile: 64px;
+}
+
+/* MotherDuck Layout Classes */
+.iGpCog {
+  padding: 12px 0px;
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.kdOTzw {
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 24px;
+  width: 100%;
+}
+@media (min-width: 728px) {
+  .kdOTzw {
+    max-width: 728px;
+    padding: 0px 20px;
+  }
+}
+@media (min-width: 960px) {
+  .kdOTzw {
+    max-width: 960px;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .kdOTzw {
+    max-width: 1302px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.bzFZqZ {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  gap: 48px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+@media (min-width: 960px) {
+  .bzFZqZ {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+/* Container & Sections */
+.koby-container {
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 24px;
+  width: 100%;
+}
+@media (min-width: 728px) {
+  .koby-container {
+    max-width: 728px;
+    padding: 0px 20px;
+  }
+}
+@media (min-width: 960px) {
+  .koby-container {
+    max-width: 960px;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .koby-container {
+    max-width: 1302px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.koby-section {
+  padding-block: var(--koby-section-gap);
+  scroll-margin-top: 90px;
+}
+
+.koby-section-alt {
+  background-color: #ede7e0;
+  border-top: 2px solid #383838;
+  border-bottom: 2px solid #383838;
+}
+
+/* MotherDuck Hard Offset Shadow Card */
+.koby-card {
+  background: var(--koby-frost-white);
+  border: 2px solid #383838;
+  border-radius: 2px;
+  padding: 32px;
+  box-shadow: -6px 6px 0px 0px #383838;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.koby-card:hover {
+  transform: translate(2px, -2px);
+  box-shadow: -8px 8px 0px 0px #383838;
+}
+
+/* Canary Yellow Card */
+.koby-card-yellow {
+  background: var(--koby-canary-banner);
+  border: 2px solid #383838;
+  border-radius: 2px;
+  padding: 32px;
+  box-shadow: -6px 6px 0px 0px #383838;
+  color: #383838;
+}
+
+/* Orange Accent Card */
+.koby-card-orange {
+  background: #ffecd6;
+  border: 2px solid #383838;
+  border-radius: 2px;
+  padding: 32px;
+  box-shadow: -6px 6px 0px 0px #383838;
+}
+
+/* Sky Blue Primary Action Button */
+.koby-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--koby-sky-crayon);
+  color: #383838;
+  font-family: var(--koby-font-mono);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 12px 24px;
+  border: 2px solid #383838;
+  border-radius: 2px;
+  box-shadow: -6px 6px 0px 0px #383838;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.koby-btn-primary:hover {
+  background: #5ab6f5;
+  transform: translate(2px, -2px);
+  box-shadow: -8px 8px 0px 0px #383838;
+}
+
+.koby-btn-primary:active {
+  transform: translate(-2px, 2px);
+  box-shadow: -3px 3px 0px 0px #383838;
+}
+
+/* Secondary Outlined Button */
+.koby-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--koby-frost-white);
+  color: #383838;
+  font-family: var(--koby-font-mono);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 12px 24px;
+  border: 2px solid #383838;
+  border-radius: 2px;
+  box-shadow: -6px 6px 0px 0px #383838;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.koby-btn-secondary:hover {
+  background: #fcfbfa;
+  transform: translate(2px, -2px);
+  box-shadow: -8px 8px 0px 0px #383838;
+}
+
+/* MotherDuck Rainbow Border Sketch Cards */
+.koby-sketch-mint {
+  border-color: var(--koby-mint-sketch);
+}
+
+.koby-sketch-coral {
+  border-color: var(--koby-coral-sketch);
+}
+
+.koby-sketch-lilac {
+  border-color: var(--koby-lilac-sketch);
+}
+
+.koby-sketch-peach {
+  border-color: var(--koby-peach-sketch);
+}
+
+/* Navigation Bar */
+.koby-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 2px solid #383838;
+}
+
+.koby-announcement {
+  min-height: 40px;
+  line-height: 1.25;
+}
+
+.koby-hero-title {
+  font-size: clamp(2.35rem, 3.08vw, 2.75rem);
+}
+
+.koby-scenario-bar {
+  flex-wrap: wrap;
+}
+
+.koby-scenario-options {
+  flex: 1 1 430px;
+  display: grid;
+  grid-template-columns: auto repeat(3, minmax(76px, 1fr));
+  align-items: center;
+}
+
+.koby-scenario-button {
+  min-width: 0;
+  min-height: 36px;
+  line-height: 1.15;
+  white-space: normal;
+}
+
+.koby-scenario-status {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+@media (min-width: 960px) {
+  .koby-hero-copy {
+    align-self: center;
+  }
+
+  .koby-hero-console {
+    min-width: 0;
+  }
+
+  .koby-hero-console-body {
+    padding: 18px 20px;
+  }
+
+  .koby-hero-console-body .space-y-0 > .h-5 {
+    height: 12px;
+  }
+
+  .koby-hero-console-body pre {
+    font-size: 11px;
+  }
+}
+
+/* Marquee Scrolling Banner */
+.koby-marquee-container {
+  background: var(--koby-canary-banner);
+  border-top: 2px solid #383838;
+  border-bottom: 2px solid #383838;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-block: 12px;
+}
+
+.koby-marquee-track {
+  display: inline-flex;
+  gap: 32px;
+  animation: kobyMarquee 25s linear infinite;
+}
+
+@keyframes kobyMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .iGpCog {
+    height: 64px;
+  }
+
+  .koby-announcement {
+    min-height: 44px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .koby-scenario-options {
+    flex-basis: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .koby-scenario-options > span:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .koby-scenario-status {
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 8px;
+    border-top: 1px solid rgba(56, 56, 56, 0.18);
+  }
+
+  .koby-section {
+    padding-block: 48px;
+    scroll-margin-top: 80px;
+  }
+
+  .koby-card,
+  .koby-card-yellow,
+  .koby-card-orange {
+    padding: 20px;
+    box-shadow: -4px 4px 0px 0px #383838;
+  }
+}

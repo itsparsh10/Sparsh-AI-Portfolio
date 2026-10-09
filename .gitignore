@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent metadata & local scratch files
+.claude
+.zcode
+.agents
+map.md
+hii.txt
+

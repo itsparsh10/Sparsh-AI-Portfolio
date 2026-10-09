@@ -76,14 +76,15 @@ export default function ProjectsTemplate() {
             I&apos;ve got some cool projects under my belt! 🎉 Here are a few highlights:
           </p>
           <p className="text-base text-slate-700 leading-relaxed">
-            Right now, I&apos;m super focused on building SaaS products that blend AI with user-friendly design. 
+            Right now, I&apos;m super focused on building SaaS products that blend AI with user-friendly design.
             Each project represents a unique challenge and learning experience.
           </p>
         </div>
 
         {/* Projects Horizontal Scroll */}
         <div className="relative -mx-6 px-6">
-          <style dangerouslySetInnerHTML={{__html: `
+          <style dangerouslySetInnerHTML={{
+            __html: `
             .projects-scroll-container::-webkit-scrollbar {
               height: 8px;
             }
@@ -99,7 +100,7 @@ export default function ProjectsTemplate() {
               background: #94a3b8;
             }
           `}} />
-          
+
           {/* Left Navigation Button */}
           <button
             onClick={scrollLeft}
@@ -120,7 +121,7 @@ export default function ProjectsTemplate() {
             <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-gray-700" />
           </button>
 
-          <div 
+          <div
             ref={scrollContainerRef}
             onScroll={checkScroll}
             className="projects-scroll-container overflow-x-auto overflow-y-hidden pb-4 scroll-smooth"
@@ -155,8 +156,8 @@ export default function ProjectsTemplate() {
                   <div className="p-3 xs:p-4 sm:p-5 md:p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
-                      {project.title}
-                    </h3>
+                        {project.title}
+                      </h3>
                       <div className="flex items-center gap-2">
                         {project.githubLink && (
                           <a
@@ -231,8 +232,8 @@ export default function ProjectsTemplate() {
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3"><strong>NC Dashboard</strong></h3>
               <ul className="text-base text-gray-700 leading-relaxed space-y-2 list-disc list-inside ml-4">
-                <li><strong>Real-Time PostgreSQL RDS Analytics:</strong> Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL RDS for instant, actionable insights</li>
-                <li><strong>Dual Database Architecture:</strong> Revolutionary hybrid microservices architecture combining PostgreSQL RDS for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations</li>
+                <li><strong>Real-Time PostgreSQL Analytics:</strong> Live data visualization with dynamic donut charts, interactive bar charts, and comprehensive user metrics powered by AWS PostgreSQL for instant, actionable insights</li>
+                <li><strong>Dual Database Architecture:</strong> Revolutionary hybrid microservices architecture combining PostgreSQL for primary data and MongoDB for authentication, delivering seamless horizontal scalability and high-performance operations</li>
                 <li><strong>Advanced RESTful API:</strong> Comprehensive RESTful API endpoints with intelligent pagination, advanced filtering, rate limiting, and standardized JSON responses for users, companies, jobs, and analytics management</li>
                 <li><strong>Enterprise User Management:</strong> Complete CRUD operations with advanced filtering, full-text search capabilities, bulk CSV import/export, and automated email system integration with SMTP configuration</li>
                 <li>Live platform available at <a href="https://analytics.nubinnoconnect.com/users/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">analytics.nubinnoconnect.com</a></li>

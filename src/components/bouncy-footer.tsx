@@ -27,9 +27,9 @@ export function BouncyFooter() {
         gsap.fromTo('#bouncy-path', {
           attr: { d: down }
         }, {
-          duration: 2, 
-          attr: { d: center }, 
-          ease: `elastic.out(${1 + variation}, ${1 - variation})`, 
+          duration: 2,
+          attr: { d: center },
+          ease: `elastic.out(${1 + variation}, ${1 - variation})`,
           overwrite: 'auto'
         });
       }
@@ -48,15 +48,15 @@ export function BouncyFooter() {
       </p>
 
       {/* Noise Overlay matching the codepen */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full z-10 opacity-40 mix-blend-color-dodge pointer-events-none"
         style={{ backgroundImage: 'url("https://assets.codepen.io/16327/noise.png")' }}
       />
-      
-      <svg 
-        preserveAspectRatio="none" 
-        id="footer-img" 
-        xmlns="http://www.w3.org/2000/svg" 
+
+      <svg
+        preserveAspectRatio="none"
+        id="footer-img"
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 2278 683"
         className="absolute bottom-0 w-full h-[80%] block overflow-visible z-0"
       >
@@ -66,9 +66,9 @@ export function BouncyFooter() {
             <stop offset="0.8" stopColor="#5b63ff"></stop>
           </linearGradient>
         </defs>
-        <path 
-          id="bouncy-path" 
-          fill="url(#grad-footer)" 
+        <path
+          id="bouncy-path"
+          fill="url(#grad-footer)"
           d="M 0 -0.3 C 0 -0.3, 464 0, 1139 0 S 2278 -0.3, 2278 -0.3 V 683 H 0 V -0.3 z"
         />
       </svg>
