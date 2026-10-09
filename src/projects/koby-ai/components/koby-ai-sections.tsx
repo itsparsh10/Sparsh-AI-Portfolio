@@ -165,12 +165,6 @@ export function HeroSection() {
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#38c1b0] border-2 border-[#383838] rounded-[2px] shadow-[-2px_2px_0px_0px_#383838]">
                 <BrainCircuit className="w-3.5 h-3.5 stroke-[2.5]" /> SentenceTransformers
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#f38e84] border-2 border-[#383838] rounded-[2px] shadow-[-2px_2px_0px_0px_#383838]">
-                <Flame className="w-3.5 h-3.5 stroke-[2.5]" /> PyTorch
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#b291de] border-2 border-[#383838] rounded-[2px] shadow-[-2px_2px_0px_0px_#383838]">
-                <Workflow className="w-3.5 h-3.5 stroke-[2.5]" /> LangChain
-              </span>
             </div>
           </div>
 
