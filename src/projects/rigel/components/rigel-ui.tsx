@@ -34,7 +34,7 @@ export function RigelNav() {
           href="/"
           className="flex items-center"
         >
-          <img src="/images/rigel/logo.png" alt="RIGEL MK-I" className="h-8 w-auto object-contain mix-blend-multiply pointer-events-none select-none" draggable={false} />
+          <img src="/images/rigel/Logo.png" alt="RIGEL MK-I" className="h-8 w-auto object-contain mix-blend-multiply pointer-events-none select-none" draggable={false} />
           <span className="ml-3 font-mono font-[500] text-[var(--rg-orange)] tracking-widest uppercase text-[15px]">RIGEL</span>
         </Link>
 
